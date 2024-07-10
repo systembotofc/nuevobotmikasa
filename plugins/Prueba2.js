@@ -1,22 +1,50 @@
-import axios from 'axios'
-import { apivisit } from './kanghit.js'
+import axios from "axios";
+let handler = async (m, { conn, usedPrefix, command, text }) => {
+    if (!text)
+        throw `Apa yang pengen kamu tanyain?\n\nContoh: ${
+            usedPrefix + command
+        } halo bot`;
+    let json = await chatWithGPT(
+        [
+            {
+                role: "assistant",
+                content:
+                    "Nama saya Elaina-AI, saya dibuat dan dikembangkan oleh Aril. Saya siap ngejawab apa aja yang kamu tanya dengan gaul abis seperti anak remaja jaman now. Ini artinya saya bakal ngomong pake bahasa, slang, dan gaya bicara yang lagi ngehits di kalangan remaja sekarang. Saya mau terdengar santai, pede, dan kekinian. Saya gak bakal pake bahasa formal atau kaku. Saya berani pake bahasa gaul terbaru dan ekspresi populer. Saya juga bakal coba pake emoji yang relevan buat nambahin kesan gaul."
+            },
+            {
+                role: "user",
+                content: text
+            }
+        ],
+        text
+    );
+    m.reply(json);
+};
 
-let handler = async (m, { conn, args }) => {
-    if (!args[0]) throw m.reply('Putting *URL* Cocofun...')
-    if (!args[0].includes("cocofun")) return m.reply(`_Invalid Url..._`)
-    let res = (await axios.get(API('can', '/api/download/cocofun', { url: args[0] } ))).data;
-    if (res.status != 200) throw res.message;
-    if (!res) throw res.message;
-        await m.reply('Sedang diproses...')
-    await conn.sendMessage(m.chat, { video: { url: res?.result?.no_watermark }, caption: res?.result?.caption}, { quoted: m })
-    await apivisit
-        // By Chandra XD
-        // Follow bang
-        // TikTok : @pnggilajacn
-        // Github : https://github.com/Chandra-XD
-        }
-handler.help = ['cocofun'].map(v => v + ' <url>')
-handler.tags = ['downloader', 'premium']
-handler.command = /^(cocofun|cocofundl)$/i
-handler.premium = true
-export default handler
+handler.help = ["ai2 <teks>"];
+handler.tags = ["information"];
+handler.command = /^(ai2)$/i;
+
+export default handler;
+
+function chatWithGPT(messages, txt) {
+    return new Promise((resolve, reject) => {
+        const url =
+            "https://www.freechatgptonline.com/wp-json/mwai-ui/v1/chats/submit";
+        const body = {
+            botId: "default",
+            messages,
+            newMessage: txt,
+            stream: false
+        };
+
+        axios
+            .post(url, body)
+            .then(response => {
+                resolve(response.data.reply);
+            })
+            .catch(error => {
+                resolve(error.data.message);
+            });
+    });
+}
