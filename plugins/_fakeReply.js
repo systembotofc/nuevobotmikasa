@@ -35,6 +35,15 @@ export async function before(m, { conn }) {
       serverMessageId: 100,
       newsletterName: nam,
     }, 
+      externalAdReply: {
+        mediaUrl: fgcanal,
+        mediaType: 'VIDEO',
+        description: 'canal del grupo',
+        title: packname,
+        body: '𝙋𝙖𝙨𝙖𝙡𝙤 𝙢𝙪𝙮 𝙗𝙞𝙚𝙣',
+        thumbnailUrl: pp,
+        sourceUrl: fgcanal
+      }
     }
   }
 
