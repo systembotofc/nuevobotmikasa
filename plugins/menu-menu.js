@@ -172,7 +172,7 @@ global.fcontact = {
       ['⏍ Info', `${_p}botinfo`],
       ['⌬ Grupos', `${_p}gpdylux`]
     ], m, rpl)*/
-    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), null, fwc)
+    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(),m, null, fwc)
     m.react('🐈‍⬛') 
 
   } catch (e) {
