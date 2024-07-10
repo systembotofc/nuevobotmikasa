@@ -1,36 +1,128 @@
-import fetch from 'node-fetch'
 
+import fetch from 'node-fetch';
 export async function before(m, { conn }) {
-let img = await (await fetch(`https://tinyurl.com/2c5hk765`)).buffer()
+   let pp = await this.profilePictureUrl(m.sender, 'image').catch(_ => 'https://i.ibb.co/S7Y1dyT/file.jpg');
 
- global.rcanal = {
+  let nam = "𝘎𝘦𝘯𝘦𝘴𝘪𝘴 𝘊𝘢𝘯𝘢𝘭 🐈‍⬛"
+
+  // Respuesta con enlace de WhatsApp
+  global.rpl = {
     contextInfo: {
             isForwarded: true,
     forwardedNewsletterMessageInfo: {
-      newsletterJid: "120363220939514640@newsletter",
+      newsletterJid: id_canal,
       serverMessageId: 100,
-      newsletterName: "𝘎𝘦𝘯𝘦𝘴𝘪𝘴 𝘊𝘢𝘯𝘢𝘭 🐈‍⬛",
-    },
-    },
+      newsletterName: nam,
+    }, 
+      externalAdReply: {
+        mediaUrl: bgp,
+        mediaType: 'VIDEO',
+        description: 'support group',
+        title: packname,
+        body: 'grupo de soporte',
+        thumbnailUrl: pp,
+        sourceUrl: bgp
+      }
+    }
+  };
+
+  // Respuesta con enlace de Canal de WhatsApp
+  global.rcanal = {
+    contextInfo: {
+            isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: id_canal,
+      serverMessageId: 100,
+      newsletterName: nam,
+    }, 
+      externalAdReply: {
+        mediaUrl: fgcanal,
+        mediaType: 'VIDEO',
+        description: 'canal del grupo',
+        title: packname,
+        body: '𝙋𝙖𝙨𝙖𝙡𝙤 𝙢𝙪𝙮 𝙗𝙞𝙚𝙣',
+        thumbnailUrl: pp,
+        sourceUrl: fgcanal
+      }
+    }
   }
 
- global.adReply = {
-            contextInfo: { 
-             forwardingScore: 9999, 
-                 isForwarded: false, 
-                    externalAdReply: {
-                                    showAdAttribution: true,
-                                        title: packname,
-                                        body: packname,
-                                        mediaUrl: null,
-                                        description: null,
-                                        previewType: "PHOTO",
-                                        thumbnailUrl: img,
-                    thumbnail: img,
-                           sourceUrl: fgcanal,
-                           mediaType: 1,
-                   renderLargerThumbnail: true
-                                }
-                        }
-                }
+    // Forwarded
+  global.fwc = {
+    contextInfo: {
+            isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: id_canal,
+      serverMessageId: 100,
+      newsletterName: nam,
+    }
+    }
+  }
+
+  // Respuesta con enlace de PayPal
+  global.rpyp = {
+    contextInfo: {
+            isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: id_canal,
+      serverMessageId: 100,
+      newsletterName: nam,
+    }, 
+      externalAdReply: {
+        mediaUrl: fgpyp,
+        mediaType: 'VIDEO',
+        description: 'Donate',
+        title: 'PayPal',
+        body: 'ayuda a mantener el bot activo',
+        thumbnailUrl: pp,
+        sourceUrl: fgpyp
+      }
+    }
+  };
+
+  // Respuesta con enlace de Instagram
+  global.rpig = {
+    contextInfo: {
+            isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: id_canal,
+      serverMessageId: 100,
+      newsletterName: nam,
+    }, 
+      externalAdReply: {
+        mediaUrl: fgig,
+        mediaType: 'VIDEO',
+        description: 'Sigueme por Instagram',
+        title: 'Instagram',
+        body: 'sigueme por Instagram',
+        thumbnailUrl: pp,
+        sourceUrl: fgig
+      }
+    }
+  };
+
+  // Respuesta con enlace de YouTube
+  global.rpyt = {
+    contextInfo: {
+            isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: id_canal,
+      serverMessageId: 100,
+      newsletterName: nam,
+    }, 
+      externalAdReply: {
+        showAdAttribution: true,
+        mediaUrl: fgyt,
+        mediaType: 'VIDEO',
+        description: 'Suscribete: ' + fgyt,
+        title: 'FG YouTube',
+        body: 'aprende a crear tus propios bots',
+        thumbnailUrl: pp,
+        sourceUrl: fgyt
+      }
+    }
+  }
+
+
+
 }
