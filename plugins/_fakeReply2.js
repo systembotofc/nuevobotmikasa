@@ -20,8 +20,8 @@ let img = await (await fetch(`https://tinyurl.com/2c5hk765`)).buffer()
                  isForwarded: false, 
                     externalAdReply: {
                                     showAdAttribution: true,
-                                        title: botname,
-                                        body: textbot,
+                                        title: packname,
+                                        body: hola,
                                         mediaUrl: null,
                                         description: null,
                                         previewType: "PHOTO",
