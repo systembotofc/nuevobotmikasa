@@ -6,6 +6,7 @@ import { xpRange } from '../lib/levelling.js'
 //import { plugins } from '../lib/plugins.js'
 let tags = {
   'ai': 'ᴀ ɪ - ʙ ᴏ ᴛ',
+  'ff': 'ꜰ ʀ ᴇ ᴇ  ꜰ ɪ ʀ ᴇ',
   'info': 'ɪ ɴ ꜰ ᴏ ʀ ᴍ ᴀ ᴄ ɪ ᴏ ɴ',
   'main': 'ᴀ ᴄ ᴇ ʀ ᴄ ᴀ  ᴅ ᴇ',
   'bebot': 'ꜱ ᴜ ʙ  ʙ ᴏ ᴛ ꜱ',
