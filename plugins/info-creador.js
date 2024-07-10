@@ -15,7 +15,7 @@ let caption = `*👋 Hola ${edtr}, este es el contacto de mi creador 🐈‍⬛*
 
 }
 handler.help = ['owner', 'creator']
-handler.tags = ['info']
+handler.tags = ['main']
 handler.command = /^(owner|creator|creador|dueño)$/i
 
 export default handler
