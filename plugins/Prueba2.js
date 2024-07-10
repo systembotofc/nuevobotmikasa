@@ -9,7 +9,6 @@ let handler = async (m, { conn, text }) => {
 let bot = '🧑🏻‍💻 Buscando....'
 conn.reply(m.chat, bot, m, rcanal, )
   if (!text) return conn.reply(m.chat, '🚩 *Te Faltó La <Ip>*', m, rcanal, )
-let pp = 'https://telegra.ph/file/50fd9ea68114f67f4d4c2.jpg'
 
   axios.get(`http://ip-api.com/json/${text}?fields=status,message,country,countryCode,region,regionName,city,district,zip,lat,lon,timezone,isp,org,as,mobile,hosting,query`).then ((res) => {
     const data = res.data
@@ -20,24 +19,23 @@ let pp = 'https://telegra.ph/file/50fd9ea68114f67f4d4c2.jpg'
     let ipsearch = `
 ☁️ *I N F O - I P* ☁️
 
-*IP:* ${data.query}
-*País:* ${data.country}
-*Código de País:* ${data.countryCode}
-*Provincia:* ${data.regionName}
-*Código de Provincia :* ${data.region}
-*Ciudad:* ${data.city}
-*Distrito:* ${data.district}
-*Código Postal:* ${res.data.zip}
-*Zona Horaria:* ${data.timezone}
-*ISP:* ${data.isp}
-*Organización:* ${data.org}
-*AS:* ${data.as}
-*Mobile:* ${data.mobile ? "Si" : "No"}
-*Hosting:* ${data.hosting ? "Si" : "No"}
+IP : ${data.query}
+País : ${data.country}
+Código de País : ${data.countryCode}
+Provincia : ${data.regionName}
+Código de Provincia : ${data.region}
+Ciudad : ${data.city}
+Distrito : ${data.district}
+Código Postal : ${res.data.zip}
+Zona Horaria : ${data.timezone}
+ISP : ${data.isp}
+Organización : ${data.org}
+AS : ${data.as}
+Mobile : ${data.mobile ? "Si" : "No"}
+Hosting : ${data.hosting ? "Si" : "No"}
 `.trim()
 
-await conn.sendfile(m.chat, ipsearch, m, fwc, )
-}
+conn.reply(m.chat, ipsearch, m, fwc, )
 })
 }
 
