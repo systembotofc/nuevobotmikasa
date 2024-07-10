@@ -172,7 +172,7 @@ global.fcontact = {
       ['⏍ Info', `${_p}botinfo`],
       ['⌬ Grupos', `${_p}gpdylux`]
     ], m, rpl)*/
-/*conn.sendMessage(m.chat, {
+ //*conn.sendMessage(m.chat, {
       video: {url: "https://telegra.ph/file/d6ab45352704f345d368f.mp4"},
       gifPlayback: true,
       caption: text.trim(),
