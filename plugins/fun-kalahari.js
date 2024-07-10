@@ -5,7 +5,7 @@ m.react('✅')
   conn.sendMessage(m.chat, {image: {url: url}, caption: '*🐈‍⬛ MAPA KALAHARI 2024 🐈‍⬛*'}, {quoted: m});
 };
 handler.command = /^(mapakalahari|kalahari)$/i;
-handler.tags = ['mapas'];
+handler.tags = ['ff'];
 handler.help = ['kalahari'];
 export default handler;
 
