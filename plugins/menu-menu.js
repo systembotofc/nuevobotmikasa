@@ -167,7 +167,7 @@ global.fcontact = {
     let pp = 'https://i.ibb.co/xFZzGjp/file.jpg'
     await conn.reply(m.chat, '🐈‍⬛ `𝗖𝗔𝗥𝗚𝗔𝗡𝗗𝗢 𝗠𝗘𝗡𝗨....`', fcontact);
 
-    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), null, fwc)
+    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), null, rcanal)
     m.react('🐈‍⬛') 
 
   } catch (e) {
