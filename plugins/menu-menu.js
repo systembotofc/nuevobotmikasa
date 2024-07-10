@@ -164,7 +164,7 @@ global.fcontact = {
         },
     };
 
-    let pp = 'https://i.ibb.co/jHctydb/Genesis-Bot.jpg'
+    let pp = 'https://i.ibb.co/xFZzGjp/file.jpg'
     await conn.reply(m.chat, '🐈‍⬛ `𝗖𝗔𝗥𝗚𝗔𝗡𝗗𝗢 𝗠𝗘𝗡𝗨....`', fcontact);
 
     /*conn.sendButton(m.chat, text.trim(), `▢ DyLux  ┃ ᴮᴼᵀ\n${mssg.ig}`, pp, [
@@ -172,7 +172,7 @@ global.fcontact = {
       ['⏍ Info', `${_p}botinfo`],
       ['⌬ Grupos', `${_p}gpdylux`]
     ], m, rpl)*/
-    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), fcontact, null, rcanal)
+    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), fcontact, null, fwc)
     m.react('🐈‍⬛') 
 
   } catch (e) {
