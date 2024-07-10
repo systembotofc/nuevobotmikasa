@@ -5,7 +5,7 @@ m.react('✅')
   conn.sendMessage(m.chat, {image: {url: url}, caption: '*🐈‍⬛ MAPA BERMUDA 2024 🐈‍⬛*'}, {quoted: m});
 };
 handler.command = /^(mapabermuda|bermuda)$/i;
-handler.tags = ['mapas'];
+handler.tags = ['ff'];
 handler.help = ['bermuda'];
 export default handler;
 
