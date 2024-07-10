@@ -5,7 +5,7 @@ m.react('✅')
   conn.sendMessage(m.chat, {image: {url: url}, caption: '*🐈‍⬛ MAPA PURGATORIO 2024 🐈‍⬛*'}, {quoted: m});
 };
 handler.command = /^(mapapurgatorio|purgatorio)$/i;
-handler.tags = ['mapas'];
+handler.tags = ['ff'];
 handler.help = ['purgatorio'];
 export default handler;
 
