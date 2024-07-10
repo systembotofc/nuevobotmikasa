@@ -27,7 +27,7 @@ let img = await (await fetch(`https://tinyurl.com/2c5hk765`)).buffer()
                                         previewType: "PHOTO",
                                         thumbnailUrl: img,
                     thumbnail: img,
-                           sourceUrl: canal,
+                           sourceUrl: fgcanal,
                            mediaType: 1,
                    renderLargerThumbnail: true
                                 }
