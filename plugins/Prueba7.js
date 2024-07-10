@@ -17,7 +17,7 @@ let alok = {
                             surface : 99999999,
                             message: 'T O U R L',
                             orderTitle: 'H A L O',
-                            thumbnail: fs.readFileSync('./thumbnail.jpg'), 
+                            thumbnail: fs.readFileSync('https://telegra.ph/file/02af5afdc4deced4e0793.jpg'), 
                             sellerJid: '0@s.whatsapp.net'
 
                           }
