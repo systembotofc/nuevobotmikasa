@@ -5,7 +5,7 @@ import fetch from 'node-fetch'
 
 let handler = async (m) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-let pp = 'https://telegra.ph/file/02af5afdc4deced4e0793.jpg',
+let pp = 'https://telegra.ph/file/02af5afdc4deced4e0793.jpg'
 let alok = {
         key : {
                           participant : '0@s.whatsapp.net'
