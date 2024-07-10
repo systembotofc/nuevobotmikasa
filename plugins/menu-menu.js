@@ -30,6 +30,7 @@ let tags = {
   'ansfw': 'ɴ ꜱ ꜰ ᴡ ᴀ ɴ ɪ ᴍ ᴇ', 
   'owner': 'ᴏ ᴡ ɴ ᴇ ʀ', 
   'advanced': 'ᴀ ᴠ ᴀ ɴ ᴢ ᴀ ᴅ ᴏ',
+  'random': 'ɪ ᴍ ɢ  ʀ ᴀ ɴ ᴅ ᴏ ᴍ',
 }
 const defaultMenu = {
   before: `
