@@ -1,12 +1,17 @@
-let handler = async (m, { conn }) => {
-let totalf = Object.values(global.plugins).filter(
-    (v) => v.help && v.tags
-  ).length;
-conn.reply(m.chat, `*» Total de Funciones* : ${totalf}`,m)
+let handler = async (m, { conn, text }) => {
+if (!text) return m.reply('🚩 Ingresa un nombre para el grupo.')
+try{
+m.reply('🚩 *Creando grupo*')
+let group = await conn.groupCreate(text, [m.sender])
+let link = await conn.groupInviteCode(group.gid)
+m.reply('https://chat.whatsapp.com/' + url)
+} catch (e) {
+m.reply(`🚩 Ocurrió un error.`)
 }
-
-handler.help = ['totalfunciones']
-handler.tags = ['main']
-handler.command = ['totalfunciones']
+}
+handler.help = ['grupocrear <nombre>']
+handler.tags = ['mods']
+handler.command = ['creargc', 'newgc', 'creargrupo', 'grupocrear']
+handler.mods = true
 handler.register = true
-export default handler 
+export default handler
