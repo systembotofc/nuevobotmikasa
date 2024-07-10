@@ -34,7 +34,7 @@ AS : ${data.as}
 Mobile : ${data.mobile ? "Si" : "No"}
 Hosting : ${data.hosting ? "Si" : "No"}
 
->By : GenesisBot-Pro
+> By : GenesisBot-Pro
 `.trim()
 
 conn.reply(m.chat, ipsearch, m, fwc, )
