@@ -19,20 +19,20 @@ conn.reply(m.chat, bot, m, rcanal, )
     let ipsearch = `
 ☁️ *I N F O - I P* ☁️
 
-IP : ${data.query}
-País : ${data.country}
-Código de País : ${data.countryCode}
-Provincia : ${data.regionName}
-Código de Provincia : ${data.region}
-Ciudad : ${data.city}
-Distrito : ${data.district}
-Código Postal : ${res.data.zip}
-Zona Horaria : ${data.timezone}
-ISP : ${data.isp}
-Organización : ${data.org}
-AS : ${data.as}
-Mobile : ${data.mobile ? "Si" : "No"}
-Hosting : ${data.hosting ? "Si" : "No"}
+*IP :* ${data.query}
+*País :* ${data.country}
+*Código de País :* ${data.countryCode}
+*Provincia :* ${data.regionName}
+*Código de Provincia :* ${data.region}
+*Ciudad :* ${data.city}
+*Distrito :* ${data.district}
+*Código Postal :* ${res.data.zip}
+*Zona Horaria :* ${data.timezone}
+*ISP :* ${data.isp}
+*Organización :* ${data.org}
+*AS :* ${data.as}
+*Mobile :* ${data.mobile ? "Si" : "No"}
+*Hosting :* ${data.hosting ? "Si" : "No"}
 `.trim()
 
 conn.reply(m.chat, ipsearch, m, fwc, )
