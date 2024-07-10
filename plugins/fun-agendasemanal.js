@@ -5,7 +5,7 @@ m.react('✅')
   conn.sendMessage(m.chat, {image: {url: url}, caption: '*🐈‍⬛ AGENDA SEMANAL 🐈‍⬛*'}, {quoted: m});
 };
 handler.command = /^(agendasemanal|agenda)$/i;
-handler.tags = ['internet'];
+handler.tags = ['ff'];
 handler.help = ['agenda'];
 export default handler;
 
