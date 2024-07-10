@@ -21,9 +21,9 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
     m.reply(json);
 };
 
-handler.help = ["ai2 <teks>"];
+handler.help = ["ai4 <teks>"];
 handler.tags = ["information"];
-handler.command = /^(ai2)$/i;
+handler.command = /^(ai4)$/i;
 
 export default handler;
 
