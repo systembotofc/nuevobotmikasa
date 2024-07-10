@@ -9,7 +9,7 @@ m.reply('https://chat.whatsapp.com/' + url)
 m.reply(`🐈‍⬛ Ocurrió un error.`)
 }
 }
-handler.help = ['grupocrear <nombre>']
+handler.help = ['creargrupo <nombre>']
 handler.tags = ['mods']
 handler.command = ['creargc', 'newgc', 'creargrupo', 'grupocrear']
 handler.register = true
