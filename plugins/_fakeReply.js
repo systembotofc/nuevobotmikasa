@@ -9,7 +9,7 @@ let img = await (await fetch(`https://tinyurl.com/2c5hk765`)).buffer()
     forwardedNewsletterMessageInfo: {
       newsletterJid: "120363220939514640@newsletter",
       serverMessageId: 100,
-      newsletterName: namechannel,
+      newsletterName: GENESIS CANAL,
     },
     },
   }
