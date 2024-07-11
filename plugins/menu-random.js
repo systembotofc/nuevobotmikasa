@@ -154,8 +154,8 @@ global.fcontact = {
     throw e
   }
 }
-//handler.help = ['menurandom']
-//handler.tags = ['main']
+handler.help = ['menurandom']
+handler.tags = ['main']
 handler.command = ['menurandom','randommenu'] 
 handler.register = false
 
