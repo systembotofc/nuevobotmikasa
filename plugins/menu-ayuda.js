@@ -120,6 +120,57 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
                 title: "",
                 description: `ᴅᴏɴᴀʀ ɢᴇɴᴇꜱɪꜱ 🎁`,
                 id: `${usedPrefix}donate`,
+
+    listSections.push({
+        title: `🔖 GENES `, highlight_label: `Popular`,
+        rows: [
+            {
+                header: "🐈‍⬛ 𝗠𝗲𝗻𝘂 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗼",
+                title: "",
+                description: `ᴍᴇɴᴜ ᴄᴏᴍᴘʟᴇᴛᴏ 📚`,
+                id: `${usedPrefix}allmenu`,
+            },
+            {
+                header: "🐈‍⬛ 𝗠𝗲𝗻𝘂 𝗔𝘂𝗱𝗶𝗼𝘀",
+                title: "",
+                description: `ᴍᴇɴᴜ ᴀᴜᴅɪᴏꜱ 🔊`,
+                id: `${usedPrefix}menuaudios`,
+            },
+            {
+                header: "🐈‍⬛ 𝗠𝗲𝗻𝘂 𝗛𝗼𝘁",
+                title: "",
+                description: `ᴍᴇɴᴜ ʜᴏᴛ 🔥`,
+                id: `${usedPrefix}labiblia`,
+            },
+            {
+                header: "🐈‍⬛ 𝗠𝗲𝗻𝘂 𝗥𝗮𝗻𝗱𝗼𝗺",
+                title: "",
+                description: `ᴍᴇɴᴜ ʀᴀɴᴅᴏᴍ ♻️`,
+                id: `${usedPrefix}menurandom`,
+            },
+            {
+                header: "✅ 𝗥𝗲𝗱𝗲𝘀",
+                title: "",
+                description: `ʀᴇᴅᴇꜱ ɢᴇɴᴇꜱɪꜱ 🍃`,
+                id: `${usedPrefix}redes`,
+            },
+            {
+                header: "📣 𝗚𝗿𝘂𝗽𝗼𝘀/𝗖𝗮𝗻𝗮𝗹𝗲𝘀",
+                title: "",
+                description: `ɢʀᴜᴘᴏꜱ ɢᴇɴᴇꜱɪꜱ 🐈‍⬛`,
+                id: `${usedPrefix}grupos`,
+            },
+{
+                header: "🚀 𝗩𝗲𝗹𝗼𝗰𝗶𝗱𝗮𝗱",
+                title: "",
+                description: `ᴠᴇʟᴏᴄɪᴅᴀᴅ ɢᴇɴᴇꜱɪꜱ 🚀`,
+                id: `${usedPrefix}ping`,
+            },
+{
+                header: "🎁 𝗗𝗼𝗻𝗮𝗿",
+                title: "",
+                description: `ᴅᴏɴᴀʀ ɢᴇɴᴇꜱɪꜱ 🎁`,
+                id: `${usedPrefix}donate`,
             },
         ],
     });
