@@ -1,6 +1,9 @@
 
 let handler = async function (m, { conn, text, usedPrefix }) {
-    const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
+
+    let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+    let user = global.db.data.users[who]
+    if (!(who in global.db.data.users)) throw `✳️ ${mssg.userDb}`
 
     m.react('🍂')
 
@@ -8,7 +11,7 @@ let m2 = `
 *▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬*
 
 . .╭─── ︿︿︿︿︿ .   .   .   .   .   . 
-. .┊• *ɴᴏᴍʙʀᴇ* :: @${m.sender.split`@`[0]}
+. .┊• *ɴᴏᴍʙʀᴇ* :: @${who.split('@')[0]}
 . .╰─── ︶︶︶︶ ♡⃕  ⌇. . .
  . . ┊⿻ [ *ꜰᴇᴄʜᴀ* :: ${fecha}]. . 
  . . ┊⿻ [ *ᴠᴇʀꜱɪᴏɴ* :: ${vs} ] . .
