@@ -1,7 +1,6 @@
 
 let handler = async function (m, { conn, text, usedPrefix }) {
 
-    let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
    m.react('🍂')
 
 let m2 = `
