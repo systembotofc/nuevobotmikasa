@@ -97,8 +97,6 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
                 description: `ᴍᴇɴᴜ ʀᴀɴᴅᴏᴍ ♻️`,
                 id: `${usedPrefix}menurandom`,
             },
-        title: `🔖 GEN SUS`, highlight_label: `Popular`,
-        rows: [
             {
                 header: "✅ 𝗥𝗲𝗱𝗲𝘀",
                 title: "",
