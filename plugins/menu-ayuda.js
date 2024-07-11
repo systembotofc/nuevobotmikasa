@@ -71,7 +71,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
     let listSections = [];
 
     listSections.push({
-        title: `🔖 MENUS DE GENESIS `, highlight_label: `Popular`,
+        title: `🔖 MENUS DE GENESIS `, highlight_label: `Popular Genesis`,
         rows: [
             {
                 header: "🐈‍⬛ 𝗠𝗲𝗻𝘂 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗼",
