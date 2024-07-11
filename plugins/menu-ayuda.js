@@ -82,19 +82,25 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
             {
                 header: ". .┊☁️ MENU AUDIOS",
                 title: "",
-                description: `ᴍᴇɴᴜ ᴀᴜᴅɪᴏꜱ 🔊`,
+                description: `𝘔𝘶𝘦𝘴𝘵𝘳𝘢 𝘦𝘭 𝘮𝘦𝘯𝘶 𝘥𝘦 𝘢𝘶𝘥𝘪𝘰𝘴`,
                 id: `${usedPrefix}menuaudios`,
             },
             {
                 header: ". .┊☁️ MENU NSFW",
                 title: "",
-                description: `ᴍᴇɴᴜ ʜᴏᴛ 🔥`,
+                description: `𝘔𝘶𝘦𝘴𝘵𝘳𝘢 𝘦𝘭 𝘮𝘦𝘯𝘶 𝘤𝘢𝘭𝘪𝘦𝘯𝘵𝘦`,
                 id: `${usedPrefix}labiblia`,
+            },
+            {
+                header: ". .┊☁️ MENU GAME",
+                title: "",
+                description: `𝘔𝘶𝘦𝘴𝘵𝘳𝘢 𝘦𝘭 𝘮𝘦𝘯𝘶 𝘥𝘦 𝘫𝘶𝘦𝘨𝘰𝘴`,
+                id: `${usedPrefix}menujuegos`,
             },
             {
                 header: ". .┊☁️ MENU RANDOM",
                 title: "",
-                description: `ᴍᴇɴᴜ ʀᴀɴᴅᴏᴍ ♻️`,
+                description: `𝘔𝘶𝘦𝘴𝘵𝘳𝘢 𝘦𝘭 𝘮𝘦𝘯𝘶 𝘥𝘦 𝘪𝘮𝘨 𝘳𝘢𝘯𝘥𝘰𝘮`,
                 id: `${usedPrefix}menurandom`,
             },
             {
