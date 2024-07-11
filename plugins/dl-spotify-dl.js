@@ -58,7 +58,7 @@ await m.react('✅')
 } catch {
 await m.react('✖️')
 }}}}
-handler.tags = ['downloader']
+handler.tags = ['dl']
 handler.help = ['spotifydl *<url spotify>*']
 handler.command = ['spotifydl']
 //handler.limit = 1
