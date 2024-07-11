@@ -59,7 +59,7 @@ await m.react('✅')
 await m.react('✖️')
 }}}}
 handler.tags = ['dl']
-handler.help = ['spotifydl *<url spotify>*']
+handler.help = ['spotifydl *<url>*']
 handler.command = ['spotifydl']
 //handler.limit = 1
 handler.register = true
