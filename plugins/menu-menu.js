@@ -32,6 +32,7 @@ let tags = {
   'owner': 'ᴏ ᴡ ɴ ᴇ ʀ', 
   'advanced': 'ᴀ ᴠ ᴀ ɴ ᴢ ᴀ ᴅ ᴏ',
   'random': 'ɪ ᴍ ɢ  ʀ ᴀ ɴ ᴅ ᴏ ᴍ',
+  'internet': 'ɪ ɴ ᴛ ᴇ ʀ ɴ ᴇ ᴛ',
 }
 const defaultMenu = {
   before: `
