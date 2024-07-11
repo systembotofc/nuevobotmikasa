@@ -74,25 +74,25 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
         title: `🔖 LISTA MENUS`, highlight_label: `Popular Genesis`,
         rows: [
             {
-                header: ". .┊ 🍀 MENU COMPLETO",
+                header: ". .┊☁️ MENU COMPLETO",
                 title: "𝘔𝘶𝘦𝘴𝘵𝘳𝘢 𝘵𝘰𝘥𝘰 𝘦𝘭 𝘮𝘦𝘯𝘶",
                 description: ``,
                 id: `${usedPrefix}allmenu`,
             },
             {
-                header: ". .┊ 🍀 MENU AUDIOS",
+                header: ". .┊☁️ MENU AUDIOS",
                 title: "",
                 description: `ᴍᴇɴᴜ ᴀᴜᴅɪᴏꜱ 🔊`,
                 id: `${usedPrefix}menuaudios`,
             },
             {
-                header: ". .┊ 🍀 MENU NSFW",
+                header: ". .┊☁️ MENU NSFW",
                 title: "",
                 description: `ᴍᴇɴᴜ ʜᴏᴛ 🔥`,
                 id: `${usedPrefix}labiblia`,
             },
             {
-                header: ". .┊ 🍀 MENU RANDOM",
+                header: ". .┊☁️ MENU RANDOM",
                 title: "",
                 description: `ᴍᴇɴᴜ ʀᴀɴᴅᴏᴍ ♻️`,
                 id: `${usedPrefix}menurandom`,
