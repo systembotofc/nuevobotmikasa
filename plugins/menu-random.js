@@ -56,7 +56,7 @@ let m2 = `
 *┊᥀·࣭࣪̇˖🐈‍⬛◗* _*.waifu*_
 *╰─────────────────┈°✿︎*
 `
-    let pp = 'https://i.ibb.co/jHctydb/Genesis-Bot.jpg' 
+    let pp = 'https://i.ibb.co/jf5R4Fm/file.jpg' 
     await conn.reply(m.chat, '🐈‍⬛ `𝗖𝗔𝗥𝗚𝗔𝗡𝗗𝗢 𝗠𝗘𝗡𝗨....`', fcontact);
     /*conn.sendButton(m.chat, m2, mssg.ig, pp, [
       ['⏍ Info', `${usedPrefix}botinfo`],
