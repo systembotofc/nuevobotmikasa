@@ -4,8 +4,7 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 //import { plugins } from '../lib/plugins.js'
 let tags = {
-  'nsfw': 'ɴ ꜱ ꜰ ᴡ',
-  'ansfw': 'ɴ ꜱ ꜰ ᴡ ᴀ ɴ ɪ ᴍ ᴇ', 
+  'random': 'ɪ ᴍ ɢ  ʀ ᴀ ɴ ᴅ ᴏ ᴍ',
 }
 const defaultMenu = {
   before: `
