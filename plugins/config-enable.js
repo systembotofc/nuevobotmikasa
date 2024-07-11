@@ -2,30 +2,65 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
 
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 
-  const optionsFull = `≡ Lista de Opciones
+  const optionsFull = `🤖𝙁𝙐𝙉𝘾𝙄𝙊𝙉𝙀𝙎 𝘿𝙀𝙇 𝘽𝙊𝙏\n\n _funcion para activar y desactivar funciones del bot para activar usa .on
+para desactivar usa .off_
 
-┌─⊷ *ADMIN*
-▢ captcha
-▢ welcome
-▢ antilink
-▢ detect
-▢ audios 
-▢ document
-▢ nsfw
-▢ modohorny
-└───────────── 
-┌─⊷ *USERS*
-▢ autolevelup
-▢ chatbot 
-└─────────────
-┌─⊷ *OWNER*
-▢ antibotclone
-▢ antiprivado
-▢ public
-▢ solopv
-▢ sologp
-└─────────────
-*📌 Ejemplo :*
+*ACTIVAR/DESACTIVAR ADMINS ☁️*
+
+
+• 𝗗𝗮𝗿 𝗯𝗶𝗲𝗻𝘃𝗲𝗻𝗶𝗱𝗮 𝗮𝗹 𝘂𝘀𝘂𝗮𝗿𝗶𝗼
+*» .on welcome*
+
+• 𝗘𝗹𝗶𝗺𝗶𝗻𝗮𝗿 𝗲𝗻𝗹𝗮𝗰𝗲𝘀 𝗴𝗿𝘂𝗽𝗮𝗹𝗲𝘀
+*» .enable antilink*
+
+• 𝗘𝗹𝗶𝗺𝗶𝗻𝗮𝗿 𝘁𝗼𝗱𝗼𝘀 𝗹𝗼𝘀 𝗲𝗻𝗹𝗮𝗰𝗲𝘀
+*» .enable antilink2*
+
+• 𝘿𝙚𝙩𝙚𝙘𝙩𝙤𝙧 𝙙𝙚 𝙘𝙤𝙣𝙛𝙞𝙜𝙪𝙧𝙖𝙘𝙞𝙤𝙣
+*» .enable detect*
+
+• 𝘿𝙚𝙩𝙚𝙘𝙩𝙤𝙧 𝙙𝙚 𝙘𝙤𝙣𝙛𝙞𝙜𝙪𝙧𝙖𝙘𝙞𝙤𝙣2
+*» .enable detect2*
+
+• 𝗥𝗲𝗲𝗻𝘃𝗶𝗮𝗿 𝗺𝗲𝗻𝘀𝗮𝗷𝗲𝘀 𝗲𝗹𝗶𝗺𝗶𝗻𝗮𝗱𝗼𝘀
+*» .enable antidelete*
+
+• 𝙋𝙚𝙧𝙢𝙞𝙩𝙞𝙧 𝙖𝙪𝙙𝙞𝙤𝙨 𝙙𝙚𝙡 𝙗𝙤𝙩
+*» .on audios_*
+
+• 𝗠𝗼𝗱𝗼 𝗵𝗼𝘁
+*» .on modohorny*
+
+• 𝗠𝗼𝗱𝗼 𝗵𝗼𝘁 2
+*» .on nsfw*
+
+• 𝗘𝗻𝘃𝗶𝗮 𝗮𝘂𝗱𝗶𝗼𝘀 𝗽𝗼𝗿 𝗽𝗮𝗹𝗮𝗯𝗿𝗮𝘀 𝗰𝗹𝗮𝘃𝗲
+*» .on audios*
+
+*ACTIVAR/DESACTIVAR USER 🫧*
+
+
+• 𝗦𝘂𝗯𝗶𝗿 𝗱𝗲 𝗻𝗶𝘃𝗲𝗹 𝗮𝘂𝘁𝗼𝗺𝗮𝘁𝗶𝗰𝗮𝗺𝗲𝗻𝘁𝗲
+*» .enable autolevelup*
+
+
+*ACTIVAR/DESACTIVAR OWNER 🐈‍⬛*
+
+• 𝗦𝗮𝗹𝗶𝗱𝗮 𝗮𝘂𝘁𝗼𝗺𝗮𝘁𝗶𝗰𝗮 𝗱𝗲 𝘀𝘂𝗯𝗯𝗼𝘁𝘀
+*» .on antibotclone*
+
+• 𝙉𝙤 𝙝𝙖𝙗𝙡𝙖𝙧 𝙖𝙡 𝙗𝙤𝙩 𝙚𝙣 𝙥𝙧𝙞𝙫𝙖𝙙𝙤
+*» .on antiprivado*
+
+• 𝙀𝙡 𝙗𝙤𝙩 𝙨𝙤𝙡𝙤 𝙝𝙖𝙗𝙡𝙖𝙧𝙖 𝙚𝙣 𝙘𝙝𝙖𝙩𝙨 𝙥𝙧𝙞𝙫𝙖𝙙𝙤𝙨
+*» .on solopv*
+
+• 𝙀𝙡 𝙗𝙤𝙩 𝙨𝙤𝙡𝙤 𝙝𝙖𝙗𝙡𝙖𝙧𝙖 𝙚𝙣 𝙘𝙝𝙖𝙩𝙨 𝙜𝙧𝙪𝙥𝙖𝙡𝙚𝙨
+*» .on sologp*
+
+
+*🐈‍⬛ EJEMPLO :*
 *${usedPrefix}on* welcome
 *${usedPrefix}off* welcome`.trim();
 
