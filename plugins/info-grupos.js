@@ -1,6 +1,6 @@
 
 let handler = async (m, { conn, command, usedPrefix }) => {
-let pp = 'https://i.ibb.co/Wxgkxm7/file.jpg'
+let pp = 'https://i.ibb.co/vD9Bhd3/file.jpg'
 m.react('✅')
 let name = await conn.getName(m.sender)
 let _uptime = process.uptime() * 1000
