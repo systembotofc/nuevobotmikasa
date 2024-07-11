@@ -83,8 +83,8 @@ global.fcontact = {
 
 }
 
-handler.help = ['menujuegos']
+handler.help = ['menurandom']
 handler.tags = ['main']
-handler.command = ['menujuegos', 'menugames'] 
+handler.command = ['menurandom', 'menúrandom'] 
 
 export default handler
