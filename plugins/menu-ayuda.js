@@ -26,8 +26,8 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
 
     let sbot =
         conn.user.jid == global.conn.user.jid
-        ? "*🐈‍⬛ `𝘉𝘰𝘵 :`* 𝘗𝘳𝘪𝘯𝘤𝘪𝘱𝘢𝘭"
-        : "*🐈‍⬛ `𝘉𝘰𝘵 : 𝘚𝘶𝘣 - 𝘣𝘰𝘵 𝘥𝘦`* " + `  Wa.me/${global.conn.user.jid.split`@`[0]}`;
+        ? ". .┊ ‹‹ `𝘉𝘖𝘛:` :: 𝘗𝘳𝘪𝘯𝘤𝘪𝘱𝘢𝘭. ."
+        : ". .┊ ‹‹ `𝘉𝘖𝘛:` :: 𝘚𝘶𝘣 - 𝘣𝘰𝘵 𝘥𝘦. ." + `  Wa.me/${global.conn.user.jid.split`@`[0]}`;
 
     global.fcontact = {
         key: {
@@ -37,7 +37,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
         },
         message: {
             contactMessage: {
-                displayName: `\nɢᴇɴᴇꜱɪꜱ ᴘʀᴏꜰᴇꜱɪᴏɴᴀʟ \nᴇʟ ᴍᴇᴊᴏʀ ʙᴏᴛ ᴅᴇ ᴡʜᴀᴛꜱᴀᴘᴘ`,
+                displayName: `\nɢ ᴇ ɴ ᴇ ꜱ ɪ ꜱ  ʙ ᴏ ᴛ  ᴘ ʀ ᴏ`,
                 vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${username}\nitem1.TEL;waid=${m.sender.split("@")[0]}:${m.sender.split("@")[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
             },
         },
@@ -55,15 +55,17 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
     txt += ". .╭── ︿︿︿︿︿ .   .   .   .   .   . \n";
     txt += '. .┊ ‹‹ `𝘊𝘙𝘌𝘈𝘋𝘖𝘙:` ::  ' + `𝘈𝘯𝘨𝘦𝘭. .\n`;
     txt += '. .┊ ‹‹ `𝘕𝘖𝘔𝘉𝘙𝘌:` ::  ' + `𝘎𝘦𝘯𝘦𝘴𝘪𝘴. .\n`;
-    txt += '*📚 `𝘓𝘪𝘣𝘳𝘦𝘳𝘪𝘢:`*' + ` _Baileys_\n`;
+    txt += '. .┊ ‹‹ `𝘍𝘌𝘊𝘏𝘈:` ::  ' + `${fecha}. .\n`;
+    txt += '. .┊ ‹‹ `𝘝𝘌𝘙𝘚𝘐𝘖𝘕:` ::  ' + `${vs}. .\n`;
+    txt += '. .┊ ‹‹ `𝘗𝘓𝘈𝘛𝘍𝘖𝘙𝘔:` ::  ' + `𝘓𝘪𝘯𝘶𝘹. .\n`;
     txt += `${sbot}\n`;
-    txt += '*⚙ `𝘗𝘳𝘦𝘧𝘪𝘫𝘰:`*' + ` [  ${usedPrefix}  ]\n`;
-    txt += '*🤖 `𝘚𝘶𝘣-𝘉𝘰𝘵𝘴 𝘈𝘤𝘵𝘪𝘷𝘰𝘴:`*' + ` _${totalUsers || '0'}_\n`;
-    txt += '*🍀 `𝘜𝘴𝘶𝘢𝘳𝘪𝘰𝘴:`*' + ` _${totalusr}_\n`;
-    txt += '*🪪 `𝘙𝘦𝘨𝘪𝘴𝘵𝘳𝘢𝘥𝘰𝘴:`*' + ` _${rtotalreg}_\n`;
-    txt += '*⌚ `𝘓𝘭𝘦𝘷𝘰 𝘈𝘤𝘵𝘪𝘷𝘢:`*' + ` _${uptime}_\n\n`;
-    txt += '> _© 2024 |_ ' + `𝘉𝘺: 𝘎𝘦𝘯𝘦𝘴𝘪𝘴 𝘉𝘰𝘵.\n\n`;
-    txt += "*_◌⃘࣭࣪࣪࣪۬🐈‍⬛─ׅ────────────◌⃘࣭ٜ࣪࣪࣪۬🐈‍⬛_*\n";
+    txt += '. .┊ ‹‹ `𝘗𝘙𝘌𝘍𝘐𝘑𝘖:` ::  ' + ` [  ${usedPrefix}  ]\n`;
+    txt += '. .┊ ‹‹ `𝘚𝘜𝘉𝘉𝘖𝘛𝘚:` ::  ' + ` _${totalUsers || '0'}_\n`;
+    txt += '. .┊ ‹‹ `𝘜𝘚𝘜𝘈𝘙𝘐𝘖𝘚:` ::  ' + ` _${totalusr}_\n`;
+    txt += '. .┊ ‹‹ `𝘙𝘌𝘎𝘐𝘚𝘛𝘙𝘈𝘋𝘖𝘚:` ::  ' + ` _${rtotalreg}_\n`;
+    txt += '. .┊ ‹‹ `𝘛𝘐𝘌𝘔𝘗𝘖 𝘈𝘊𝘛:` ::  ' + ` _${uptime}_\n\n`;
+    txt += '. .┊ ‹‹ `𝘖𝘞𝘕𝘌𝘙:` ::  comando #owner';
+    txt += ". .╰─── ︶︶︶︶ ♡⃕  ⌇. . .\n";
 
     let listSections = [];
 
