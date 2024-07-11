@@ -1,7 +1,7 @@
 
 let handler = async function (m, { conn, text, usedPrefix }) {
 
-    m.react('🎮')
+    m.react('🍂')
 
 let m2 = `
 *▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬*
