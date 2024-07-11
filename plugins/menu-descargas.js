@@ -80,7 +80,7 @@ global.fcontact = {
     ],m, rpyt)*/
     /*conn.sendFile(m.chat, pp, 'menu.jpg', m2, m, null, rcanal)*/
 conn.sendMessage(m.chat, {
-      video: {url: "https://telegra.ph/file/4fba380f8873af7e8a581.mp4"},
+      video: {url: "https://telegra.ph/file/82686cbca76055f946e94.mp4"},
       gifPlayback: true,
       caption: m2.trim(),
       })
