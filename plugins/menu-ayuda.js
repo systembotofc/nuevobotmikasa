@@ -107,13 +107,13 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
                 header: ". .┊☁️ MENU DESCARGAS",
                 title: "",
                 description: `𝘔𝘶𝘦𝘴𝘵𝘳𝘢 𝘦𝘭 𝘮𝘦𝘯𝘶 𝘥𝘦 𝘥𝘦𝘴𝘤𝘢𝘳𝘨𝘢𝘴`,
-                id: `${usedPrefix}menurandom`,
+                id: `${usedPrefix}menudl`,
             },
             {
                 header: ". .┊☁️ MENU AI",
                 title: "",
                 description: `𝘔𝘶𝘦𝘴𝘵𝘳𝘢 𝘦𝘭 𝘮𝘦𝘯𝘶 𝘥𝘦 𝘐𝘈-𝘉𝘰𝘵`,
-                id: `${usedPrefix}menurandom`,
+                id: `${usedPrefix}menuai`,
             },
             {
                 header: ". .┊☁️ REDES GENESIS",
