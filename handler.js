@@ -174,7 +174,7 @@ export async function handler(chatUpdate) {
                     useDocument: true,
                     captcha: false,
                     antiBotClone: false,
-                    nsfw: false, 
+                    nsfw: true, 
                     expired: 0,
                     rules: '',
                 }
@@ -192,7 +192,7 @@ export async function handler(chatUpdate) {
                 self: false,
                 autoread: false,
                 restrict: false,
-                antiPrivate: false,
+                antiPrivate: true,
                 solopv: false, 
                 sologp: false,
                 status: 0
