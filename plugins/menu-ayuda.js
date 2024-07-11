@@ -75,8 +75,8 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
         rows: [
             {
                 header: ". .┊ 🍀 MENU COMPLETO",
-                title: "",
-                description: `ᴍᴇɴᴜ ᴄᴏᴍᴘʟᴇᴛᴏ 📚`,
+                title: "𝘔𝘶𝘦𝘴𝘵𝘳𝘢 𝘵𝘰𝘥𝘰 𝘦𝘭 𝘮𝘦𝘯𝘶",
+                description: ``,
                 id: `${usedPrefix}allmenu`,
             },
             {
