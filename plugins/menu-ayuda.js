@@ -71,28 +71,28 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
     let listSections = [];
 
     listSections.push({
-        title: `🔖 MENUS DE GENESIS `, highlight_label: `Popular Genesis`,
+        title: `🔖 LISTA MENUS`, highlight_label: `Popular Genesis`,
         rows: [
             {
-                header: "🐈‍⬛ 𝗠𝗲𝗻𝘂 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗼",
+                header: ". .┊ 🍀 MENU COMPLETO",
                 title: "",
                 description: `ᴍᴇɴᴜ ᴄᴏᴍᴘʟᴇᴛᴏ 📚`,
                 id: `${usedPrefix}allmenu`,
             },
             {
-                header: "🐈‍⬛ 𝗠𝗲𝗻𝘂 𝗔𝘂𝗱𝗶𝗼𝘀",
+                header: ". .┊ 🍀 MENU AUDIOS",
                 title: "",
                 description: `ᴍᴇɴᴜ ᴀᴜᴅɪᴏꜱ 🔊`,
                 id: `${usedPrefix}menuaudios`,
             },
             {
-                header: "🐈‍⬛ 𝗠𝗲𝗻𝘂 𝗛𝗼𝘁",
+                header: ". .┊ 🍀 MENU NSFW",
                 title: "",
                 description: `ᴍᴇɴᴜ ʜᴏᴛ 🔥`,
                 id: `${usedPrefix}labiblia`,
             },
             {
-                header: "🐈‍⬛ 𝗠𝗲𝗻𝘂 𝗥𝗮𝗻𝗱𝗼𝗺",
+                header: ". .┊ 🍀 MENU RANDOM",
                 title: "",
                 description: `ᴍᴇɴᴜ ʀᴀɴᴅᴏᴍ ♻️`,
                 id: `${usedPrefix}menurandom`,
