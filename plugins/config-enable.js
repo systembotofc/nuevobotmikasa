@@ -8,8 +8,6 @@ let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status
 ▢ captcha
 ▢ welcome
 ▢ antilink
-▢ antilink2
-▢ antitoxic
 ▢ detect
 ▢ audios 
 ▢ document
