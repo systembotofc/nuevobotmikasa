@@ -1,7 +1,3 @@
-// Código gracias a SoIz1 
-// Github: https://github.com/SoIz1
-//Adaptado por KatashiFukushima. Github: https://github.com/KatashiFukushima
-
 import axios from 'axios'
 
 let handler = async (m, { conn, text }) => {
