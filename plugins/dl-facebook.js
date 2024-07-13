@@ -21,8 +21,8 @@ conn.reply(m.chat, '🚀 𝗗𝗲𝘀𝗰𝗮𝗿𝗴𝗮𝗻𝗱𝗼 𝗘𝗹 �
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
 title: packname,
 body: packname,
-previewType: 0, thumbnail: icons,
-sourceUrl: channel }}})
+previewType: 0, thumbnail: '',
+sourceUrl: fgcanal }}})
 m.react(rwait)
 let messageType = checkMessageType(args[0])
 let message = ''
