@@ -16,7 +16,7 @@ switch (true) {
 case isCommand7:
 if (!text) return conn.reply(m.chat, `🎌 *Ingrese un enlace de facebook*\n\nEjemplo, !fb https://fb.watch/kAOXy3wf2L/?mibextid=Nif5oz`, m, )
 if (!args[0].match(/www.facebook.com|fb.watch|web.facebook.com|business.facebook.com|video.fb.com/g)) return conn.reply(m.chat, '🎌 *No es un enlace válido*', m, )
-await conn.reply(m.chat, '⏰ Espere un momento', m, fake, )
+await conn.reply(m.chat, '⏰ Espere un momento', m, )
 m.react(done)
 let messageType = checkMessageType(args[0])
 let message = ''
