@@ -39,7 +39,7 @@ m.react(`🔥`)
 };
 handler.help = ['xnxxdl']
 handler.tags = ['nsfw'];
-handler.command = /^(xnxxdl)$/i;
+handler.command = /^(xnxxdl2)$/i;
 handler.limit = 12
 handler.register = true
 export default handler;
