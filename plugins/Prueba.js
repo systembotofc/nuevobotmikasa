@@ -7,7 +7,6 @@ let handler = async (m, { conn, command }) => {
 
 if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `${lenguajeGB['smsContAdult']()}`
 let url = muslos[Math.floor(Math.random() * muslos.length)]
-conn.sendFile(m.chat, url, 'error.jpg', `muslos 🥵`, m)
 conn.sendButton(m.chat, `muslos 🥵`, packname, {url: muslos}, [['𝙎𝙄𝙂𝙐𝙄𝙀𝙉𝙏𝙀 | 𝙉𝙀𝙓𝙏 🆕', `.muslos`]], null, null, m)
 }
 handler.help = ['muslos']
