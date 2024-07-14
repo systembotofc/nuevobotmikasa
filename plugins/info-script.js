@@ -43,7 +43,7 @@ token: '9',
 curreyCode: 'IDR',
 totalCurrencyCode: '>〰<',
 totalAmount1000: '1000000',
-sellerJid: sc,
+sellerJid: fgsc,
 thumbnail: 'https://tinyurl.com/22xa95xa'
 }}, {contextInfo: null, quoted: m})
 conn.relayWAMessage(prep)
