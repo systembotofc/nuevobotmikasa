@@ -11,8 +11,24 @@ global.mods = ['']
 global.prems = ['59168683798']
 global.APIs = { // API Prefix
   // name: 'https://website' 
-  nrtm: 'https://fg-nrtm.ddns.net',
-  fgmods: 'https://api.fgmods.xyz'
+  ApiEmpire: 'https://api-brunosobrino.zipponodes.xyz',
+  xteam: 'https://api.xteam.xyz',
+  dzx: 'https://api.dhamzxploit.my.id',
+  lol: 'https://api.lolhuman.xyz',
+  neoxr: 'https://api.neoxr.my.id',
+  zenzapis: 'https://api.zahwazein.xyz',
+  akuari: 'https://api.akuari.my.id',
+  akuari2: 'https://apimu.my.id',
+  fgmods: 'https://api-fgmods.ddns.net',
+  botcahx: 'https://api.botcahx.biz.id',
+  ibeng: 'https://api.ibeng.tech/docs',
+  rose: 'https://api.itsrose.site',
+  popcat: 'https://api.popcat.xyz',
+  xcoders: 'https://api-xcoders.site',
+  vihangayt: 'https://vihangayt.me',
+  erdwpe: 'https://api.erdwpe.com',
+  xyroinee: 'https://api.xyroinee.xyz',
+  nekobot: 'https://nekobot.xyz'
 }
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
