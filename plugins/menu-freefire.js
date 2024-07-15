@@ -64,8 +64,8 @@ conn.sendMessage(m.chat, {
 
 }
 
-handler.help = ['menuai']
+handler.help = ['menuff']
 handler.tags = ['main']
-handler.command = ['menuai', 'aimenu'] 
+handler.command = ['menuff', 'ffmenu'] 
 
 export default handler
