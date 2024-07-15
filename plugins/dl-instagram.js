@@ -1,25 +1,27 @@
-const { savefrom, instagramdl } = require('@bochilteam/scraper')
-let fetch = require('node-fetch')
 
+import fetch from 'node-fetch'
 let handler = async (m, { conn, args, usedPrefix, command }) => {
+    if (!args[0]) throw `✳️ ${mssg.useCmd}\n *${usedPrefix + command}* https://www.instagram.com/p/CYHeKxyMj-J/?igshid=YmMyMTA2M2Y=`
+    m.react(rwait)
 
-  if (!args[0]) throw `_Masukkan link_\n\nContoh:\n${usedPrefix + command} https://www.instagram.com/p/linkurl`
-  if (/stories/i.test(args[0])) throw `_Perintah ini untuk mendownload post IG, bukan story_\nGunakan fitur berikut \n\n${usedPrefix}igstory username`
-  if (!args[0].match(/(https:\/\/www.)?instagram.com\/([A-Za-z0-9.\_]*\/)?(reel|p|tv)/)) throw `Link tidak valid \n\nContoh:\n${usedPrefix + command} https://www.instagram.com/p/linkurl`
-  let ig = await fetch(global.API('alya', 'api/ig', { url: args[0] }, 'apikey'))
-  let res = await ig.json()
-  let vid = res.data
+try {
+    let res = await fetch(global.API('fgmods', '/api/downloader/igdl', { url: args[0] }, 'apikey'))
+    if (!res.ok) throw `❎ ${mssg.error} ` 
+    let data = await res.json()
 
-  await m.reply('_Sedang proses mengirim..._')
+    for (let item of data.result) {
+        conn.sendFile(m.chat, item.url, 'igdl.jpg', `✅ ${mssg.result}`, m)
+    }
 
-  for (let { type, url } of vid) {
-    await conn.sendFile(m.chat, url, 'ig.' + (type == 'image') ? 'jpg' : 'mp4')
-      , '', m, null, { asDocument: global.db.data.users[m.sender].useDocument }
-  }
+
+    } catch (error) {
+        m.reply(`❎ ${mssg.error}`)
+    }
+
 }
-handler.help = ['ig', 'instagram'].map(v => v + ' <link>')
-handler.tags = ['downloadersosmed']
-handler.command = /^(ig|instagram)2?$/i
-handler.limit = true
+handler.help = ['instagram <link ig>']
+handler.tags = ['dl']
+handler.command = ['ig', 'igdl', 'instagram', 'igimg', 'igvid']
+handler.diamond = true
 
-module.exports = handler
+export default handler
