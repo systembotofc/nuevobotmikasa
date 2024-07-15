@@ -58,6 +58,5 @@ handler.help = ['mediafire <url>']
 handler.tags = ['dl']
 handler.command = ['mediafire', 'mfire'] 
 handler.diamond = true
-handler.premium = false
 
 export default handler
