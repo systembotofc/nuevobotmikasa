@@ -62,4 +62,4 @@ async function igstalk(username) {
     console.error(e)
     throw 'Username tidak ditemukan'
   }
-}*//
+}*\\
