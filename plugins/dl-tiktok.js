@@ -5,6 +5,7 @@ var handler = async (m, { conn, args }) => {
     if (!args[0]) {
         throw 'Uhm... URL-nya mana?';
     }
+        m.react('✅') 
 
     try {
         await conn.reply(m.chat, '`𝗖𝗔𝗥𝗚𝗔𝗡𝗗𝗢` 🐈‍⬛', m, fwc);
