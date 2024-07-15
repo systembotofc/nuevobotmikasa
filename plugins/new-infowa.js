@@ -5,7 +5,7 @@ let regionNames = new Intl.DisplayNames(['en'], { type: 'region' })
 
 let handler = async (m, { conn, text, usedPrefix, command: cmd }) => {
         let num = m.quoted?.sender || m.mentionedJid?.[0] || text
-        if (!num) throw '➤ `𝗔𝗩𝗜𝗦𝗢` 🐈‍⬛\n\n*COMANDO CORRECTO*\n_Ejemplo: .infowa <tag|número>_';`
+        if (!num) throw '➤ `𝗔𝗩𝗜𝗦𝗢` 🐈‍⬛\n\n*COMANDO CORRECTO*\n_Ejemplo: .infowa <tag|número>_';
         num = num.replace(/\D/g, '') + '@s.whatsapp.net'
         if (!(await conn.onWhatsApp(num))[0]?.exists) throw 'Usuario inexistente'
 m.react('✅')
