@@ -3,7 +3,7 @@ import cheerio from 'cheerio'
 
 var handler = async (m, { conn, args }) => {
     if (!args[0]) {
-        throw 'Uhm... URL-nya mana?';
+        throw '${mssg.avisoGene4}\n\n*INGRESA EL LINK DEL TIKTOK*\n_Ejemplo: ${usedPrefix + command} <link>_';
     }
         m.react('🕒') 
 
