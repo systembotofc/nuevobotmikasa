@@ -2,7 +2,7 @@ import axios from 'axios'
 
 let handler = async (m, {usedPrefix, command, conn, text }) => {
 
-if (!text) throw '➤ `𝗔𝗩𝗜𝗦𝗢` 🐈‍⬛\n\n*INGRESA EL USUARIO DE TIKTOK*\n_Ejemplo: ${usedPrefix + command} <username>_',
+if (!text) throw '➤ `𝗔𝗩𝗜𝗦𝗢` 🐈‍⬛\n\n*INGRESA EL USUARIO DE TIKTOK*\n_Ejemplo: ${usedPrefix + command} <username>_';
 try {
 m.reply(wait)
 let ress = await axios.get(`https://www.api-nightmares.my.id/api/tiktok-stalk?q=${text}&apikey=Tio`)
