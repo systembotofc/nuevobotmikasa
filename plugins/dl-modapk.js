@@ -15,5 +15,7 @@ const handler = async (m, {conn, usedPrefix: prefix, command, text}) => {
     throw `'${mssg.avisoGene4}\n\n*Error no se encontraron resultados para su busqueda*`;
   }    
 };
+handler.help = ["apk <name>"]
+handler.tags = ["dl"]
 handler.command = /^(apk|modapk|dapk2|aptoide|aptoidedl)$/i;
 export default handler;
