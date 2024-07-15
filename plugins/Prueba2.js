@@ -3,6 +3,10 @@ const pp = 'https://tinyurl.com/2648ennm';
 const groupAdmins = participants.filter(p => p.admin) 
 const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).join('\n')
 const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
+if (!text) return m.reply(`Ingresa un horario`)
+if (text.length < 0) return m.reply(`⚙️ 𝗛𝗢𝗥𝗔𝗥𝗜𝗢 𝗠𝗔𝗟 𝗘𝗦𝗖𝗥𝗜𝗧𝗢, 𝗜𝗡𝗧𝗘𝗡𝗧𝗔 𝗗𝗘 𝗡𝗨𝗘𝗩𝗢.`)
+let mensaje = args.join` `
+let yo = `│🕓 𝗛𝗢𝗥𝗔: *${text}*`
 let text = 
 `
 ╭──────>⋆☽⋆ ⋆☾⋆<──────╮
