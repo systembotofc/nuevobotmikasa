@@ -4,16 +4,21 @@ const pp = 'https://tinyurl.com/2648ennm'
 const groupAdmins = participants.filter(p => p.admin)
 const listaAdmins = groupAdmins.map((v, i) => ``).join('\n')
 const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
-if (!text) return m.reply(`Ingresa un horario`)
+if (!text) return m.reply('➤ `𝗔𝗩𝗜𝗦𝗢` 🐈‍⬛\n\n*INGRESA UN HORARIO*\n_Ejemplo: .4vs4infimasc 10:00 🇦🇷_')
 if (text.length < 0) return m.reply(`⚙️ 𝗛𝗢𝗥𝗔𝗥𝗜𝗢 𝗠𝗔𝗟 𝗘𝗦𝗖𝗥𝗜𝗧𝗢, 𝗜𝗡𝗧𝗘𝗡𝗧𝗔 𝗗𝗘 𝗡𝗨𝗘𝗩𝗢.`)
+        m.react('🎮') 
 let mensaje = args.join` `
 let yo = `│🕓 𝗛𝗢𝗥𝗔: *${text}*`
-let texto = `╭──────⚔──────╮
-ㅤㅤㅤ4 𝐕𝐄𝐑𝐒𝐔𝐒 4
-╰──────⚔──────╯
-╭──────────────╮
+let texto = `
+╭──────>⋆☽⋆ 🐈‍⬛ ⋆☾⋆<──────╮
+ㅤ          •𝟰  𝗩 𝗘 𝗥 𝗦 𝗨 𝗦  𝟰•
+                    ${groupMetadata.subject}
+╰──────>⋆☽⋆ 🐈‍⬛ ⋆☾⋆<──────╯
+
+
+╭──────>⋆☽⋆ 🐈‍⬛ ⋆☾⋆<──────╮
 ${yo}
-│➥ 𝐌𝐎𝐃𝐀𝐋𝐈𝐃𝐀𝐃: 
+│🎮 𝗠𝗢𝗗𝗔𝗟𝗜𝗗𝗔𝗗: *Infinito 😼*
 │
 │     𝗘𝗦𝗖𝗨𝗔𝗗𝗥𝗔 
 │
@@ -25,13 +30,13 @@ ${yo}
 │ㅤʚ 𝐒𝐔𝐏𝐋𝐄𝐍𝐓𝐄:
 │⚜️ ➤ 
 │⚜️ ➤ 
-╰─────────────╯`.trim()
-conn.sendFile(m.chat, pp, 'error.jpg', texto, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
+╰──────>⋆☽⋆ 🐈‍⬛ ⋆☾⋆<──────╯`.trim()
+conn.sendFile(m.chat, pp, 'error.jpg', texto, m, true, { mentions: [...groupAdmins.map(v => v.id), owner] })
 
 }
-handler.help = ['4vs4masc <hora>']
+handler.help = ['4vs4infimasc <hora>']
 handler.tags = ['ff']
-handler.command = /^(4x4masc|4vs4masc)$/i
+handler.command = /^(4x4infimasc|4vs4infimasc)$/i
 handler.admin = true
 handler.group = true
 
