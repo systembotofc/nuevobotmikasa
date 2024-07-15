@@ -5,10 +5,9 @@ var handler = async (m, { conn, args }) => {
     if (!args[0]) {
         throw 'Uhm... URL-nya mana?';
     }
-        m.react('✅') 
+        m.react('🕒') 
 
     try {
-        await conn.reply(m.chat, '`𝗖𝗔𝗥𝗚𝗔𝗡𝗗𝗢` 🐈‍⬛', m, fwc);
 
         const tiktokData = await tryServer1(args[0]);
 
@@ -24,6 +23,7 @@ var handler = async (m, { conn, args }) => {
         if (tiktokData.author && tiktokData.author.avatar) {
             ppTiktok = tiktokData.author.avatar;
         }
+        m.react('✅') 
 
         const infonya_gan = `𝗔𝗤𝗨𝗜 𝗧𝗜𝗘𝗡𝗘𝗦 𝗧𝗨 𝗩𝗜𝗗𝗘𝗢 🐈‍⬛\n\n𝗙𝗲𝗰𝗵𝗮: ${tiktokData.created_at}\n𝗨𝘀𝘂𝗮𝗿𝗶𝗼: ${tiktokData.author.name || 'Tidak ada informasi penulis'}\n`;
 
