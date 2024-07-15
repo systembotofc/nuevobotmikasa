@@ -1,4 +1,4 @@
-let handler = async (m, { conn, participants, groupMetadata }) => { 
+let handler = async (m, { conn, participants, groupMetadata, args, text }) => { 
 const pp = 'https://tinyurl.com/2648ennm';
 const groupAdmins = participants.filter(p => p.admin) 
 const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).join('\n')
