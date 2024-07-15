@@ -17,7 +17,7 @@ let texto = `
 
 ╭──────>⋆☽⋆ 🐈‍⬛ ⋆☾⋆<──────╮
 ${yo}
-│🎮 𝗠𝗢𝗗𝗔𝗟𝗜𝗗𝗔𝗗: 
+│🎮 𝗠𝗢𝗗𝗔𝗟𝗜𝗗𝗔𝗗: *Infinito 😼*
 │
 │     𝗘𝗦𝗖𝗨𝗔𝗗𝗥𝗔 
 │
@@ -33,9 +33,9 @@ ${yo}
 conn.sendFile(m.chat, pp, 'error.jpg', texto, m, true, { mentions: [...groupAdmins.map(v => v.id), owner] })
 
 }
-handler.help = ['4vs4masc <hora>']
+handler.help = ['4vs4infimasc <hora>']
 handler.tags = ['ff']
-handler.command = /^(4x4masc|4vs4masc2)$/i
+handler.command = /^(4x4infimasc|4vs4infimasc)$/i
 handler.admin = true
 handler.group = true
 
