@@ -24,7 +24,7 @@ var handler = async (m, { conn, args }) => {
             ppTiktok = tiktokData.author.avatar;
         }
 
-        const infonya_gan = `𝗔𝗤𝗨𝗜 𝗧𝗜𝗘𝗡𝗘𝗦 𝗧𝗨 𝗩𝗜𝗗𝗘𝗢 🐈‍⬛\n\n𝗙𝗲𝗰𝗵𝗮: ${tiktokData.created_at}\n𝗨𝘀𝘂𝗮𝗿𝗶𝗼: ${tiktokData.author.name || 'Tidak ada informasi penulis'}\n`;
+        const infonya_gan = `𝗔𝗤𝗨𝗜 𝗧𝗜𝗘𝗡𝗘𝗦 𝗧𝗨 𝗩𝗜𝗗𝗘𝗢 🐈‍⬛\n\n𝗙𝗲𝗰𝗵𝗮: ${tiktokData.created_at}\n𝗨𝘀𝘂𝗮𝗿𝗶𝗼: ${tiktokData.author.name || 'No hay información'}\n`;
 
         if (videoURL || videoURLWatermark) {
             await conn.sendFile(m.chat, videoURL, 'tiktok.mp4', `${infonya_gan}`, m);
@@ -42,7 +42,7 @@ var handler = async (m, { conn, args }) => {
             const tiktokData2 = await tryServer2(args[0]);
 
             if (!tiktokData2) {
-                throw 'Gagal mendownload video!';
+                throw '➤ `𝗔𝗩𝗜𝗦𝗢` 🐈‍⬛\n\n*¡NO SE PUDO DESCARGAR EL VIDEO!*';
             }
 
             const videoURL2 = tiktokData2.video;
