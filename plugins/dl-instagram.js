@@ -1,14 +1,57 @@
-import hx from 'hxz-api'
-import fetch from 'node-fetch'
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-if (!(args[0])) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝚄𝙽 𝙴𝙽𝙻𝙰𝙲𝙴 𝙳𝙴 𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼, 𝙴𝙹𝙴𝙼𝙿𝙻𝙾: ${usedPrefix + command} https://www.instagram.com/reel/Cc0NuYBg8CR/?utm_source=ig_web_copy_link*`
-hx.igdl(args[0]).then(async (r) => {
-for (let i = 0; i < r.medias.length; i++) {
-let shortUrl = await (await fetch(`https://tinyurl.com/api-create.php?url=${r.medias[i].url}`)).text()
-let txt = `🔗 *Url:* ${shortUrl}`.trim()
-await conn.sendFile(m.chat, r.medias[i].url, '', txt, m)
-}})}
-handler.command = /^instagramdl|instagram|igdl|ig$/i
-handler.exp = 70
-handler.dfail = null
-export default handler
+import { instagramdl } from '@bochilteam/scraper';
+import fetch from 'node-fetch';
+
+var handler = async (m, { args, conn, usedPrefix, command }) => {
+    if (!args[0]) throw `Ex:\n${usedPrefix}${command} https://www.instagram.com/reel/C0EEgMNSSHw/?igshid=MzY1NDJmNzMyNQ==`;
+    try {
+        let res = await bochil.snapsave(args[0]);
+        let media = await res[0].url;
+      
+        const sender = m.sender.split(`@`)[0];
+
+        conn.reply(m.chat, 'Sedang mengunduh video...', m);
+
+        if (!res) throw 'Can\'t download the post';
+      
+        await conn.sendMessage(m.chat, { video: { url: media }, caption: `ini kak videonya @${sender}`, mentions: [m.sender]}, m);
+      
+      await conn.sendMessage(m.chat, { 
+        document: { url: media }, 
+        mimetype: 'video/mp4', 
+        fileName: `instagram.mp4`,
+        caption: `ini kak videonya @${sender} versi dokumen, agar jernih`, mentions: [m.sender]
+      }, {quoted: m})
+
+    } catch (e) {
+      try {
+          let response = await fetch(`https://tr.deployers.repl.co/instagramdl?url=${encodeURIComponent(args[0])}`);
+          let data = await response.json();
+
+          if (data.image && data.video) {
+              const sender = m.sender.split(`@`)[0];
+
+              conn.reply(m.chat, 'Sedang mengunduh video...', m);
+
+            await conn.sendMessage(m.chat, { video: data.video, caption: `ini kak videonya @${sender}`, mentions: [m.sender] }, m);
+
+            await conn.sendMessage(m.chat, { 
+              document: { url: data.video }, 
+              mimetype: 'video/mp4', 
+              fileName: `instagram.mp4`,
+              caption: `ini kak videonya @${sender} versi dokumen, agar jernih`, mentions: [m.sender]
+            }, {quoted: m})
+            
+          } else {
+              throw 'Gagal mengunduh video';
+          }
+      } catch (error) {
+          conn.reply(m.chat, 'Gagal mengunduh video', m);
+      }
+    }
+};
+
+handler.help = ['instagram'];
+handler.tags = ['downloader'];
+handler.command = /^(ig(dl)?|instagram(dl)?)$/i;
+
+export default handler;
