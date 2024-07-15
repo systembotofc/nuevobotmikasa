@@ -12,7 +12,7 @@ var handler = async (m, { conn, args }) => {
         const tiktokData = await tryServer1(args[0]);
 
         if (!tiktokData) {
-            throw 'Gagal mendownload video!';
+            throw '➤ `𝗔𝗩𝗜𝗦𝗢` 🐈‍⬛\n\n*¡NO SE PUDO DESCARGAR EL VIDEO!*';
         }
 
         const videoURL = tiktokData.video.noWatermark;
@@ -33,12 +33,12 @@ var handler = async (m, { conn, args }) => {
                 //await conn.sendFile(m.chat, `${tiktokData.music.play_url}`,'lagutt.mp3', 'ini lagunya',m);
             }, 5000);
         } else {
-            throw 'Tidak ada tautan video yang tersedia.';
+            throw '➤ `𝗔𝗩𝗜𝗦𝗢` 🐈‍⬛\n\n*NO HAY ENLACE DE VÍDEO DISPONIBLE.*';
         }
     } catch (error1) {
         // jika server 1 gagal, gunakan server 2
         try {
-            await conn.reply(m.chat, 'Tunggu sebentar kak, video sedang di download... server 2', m);
+            await conn.reply(m.chat, '➤ `𝗔𝗩𝗜𝗦𝗢` 🐈‍⬛\n\n*Espera un momento, el video se está descargando... servidor 2*', m);
             const tiktokData2 = await tryServer2(args[0]);
 
             if (!tiktokData2) {
@@ -50,9 +50,9 @@ var handler = async (m, { conn, args }) => {
             const thumbnailURL = tiktokData2.thumbnail;
 
             // Lakukan apa yang Anda perlukan dengan tiktokData2 dari Server 2 di sini
-            //await conn.sendFile(m.chat, thumbnailURL, 'thumbnail.jpg', 'Ini thumbnail videonya', m);
-            await conn.sendFile(m.chat, videoURL2, 'tiktok2.mp4', 'Ini kak videonya dari Server 2', m);
-            //await conn.sendFile(m.chat, audioURL2, 'tiktok.mp3', 'Ini kak audionya', m);
+            //await conn.sendFile(m.chat, thumbnailURL, 'thumbnail.jpg', 'Esta es la miniatura del vídeo.', m);
+            await conn.sendFile(m.chat, videoURL2, 'tiktok2.mp4', 'Este es el vídeo del Servidor 2.', m);
+            //await conn.sendFile(m.chat, audioURL2, 'tiktok.mp3', 'Este es el audio.', m);
             conn.reply(m.chat, "tiktok.ryzendesu.com", m);
 
         } catch (error2) {
@@ -63,7 +63,7 @@ var handler = async (m, { conn, args }) => {
 };
 
 handler.help = ['tiktok'].map((v) => v + ' <url>');
-handler.tags = ['downloader'];
+handler.tags = ['dl'];
 handler.command = /^t(t|iktok(d(own(load(er)?)?|l))?|td(own(load(er)?)?|l))$/i;
 
 export default handler;
