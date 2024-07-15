@@ -32,7 +32,7 @@ conn.sendFile(m.chat, pp, 'error.jpg', texto, m, false, { mentions: [...groupAdm
 }
 handler.help = ['4vs4masc <hora>']
 handler.tags = ['ff']
-handler.command = /^(4x4masc|4vs4masc)$/i
+handler.command = /^(4x4masc|4vs4masc2)$/i
 handler.admin = true
 handler.group = true
 
