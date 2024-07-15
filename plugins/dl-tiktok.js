@@ -24,12 +24,12 @@ var handler = async (m, { conn, args }) => {
             ppTiktok = tiktokData.author.avatar;
         }
 
-        const infonya_gan = `𝗔𝗤𝗨𝗜 𝗧𝗜𝗘𝗡𝗘𝗦 𝗧𝗨 𝗩𝗜𝗗𝗘𝗢 🐈‍⬛\n\n𝗙𝗲𝗰𝗵𝗮: ${tiktokData.created_at}\n\nSTATUS:\n\n𝗨𝘀𝘂𝗮𝗿𝗶𝗼: ${tiktokData.author.name || 'Tidak ada informasi penulis'}\n`;
+        const infonya_gan = `𝗔𝗤𝗨𝗜 𝗧𝗜𝗘𝗡𝗘𝗦 𝗧𝗨 𝗩𝗜𝗗𝗘𝗢 🐈‍⬛\n\n𝗙𝗲𝗰𝗵𝗮: ${tiktokData.created_at}\n𝗨𝘀𝘂𝗮𝗿𝗶𝗼: ${tiktokData.author.name || 'Tidak ada informasi penulis'}\n`;
 
         if (videoURL || videoURLWatermark) {
             await conn.sendFile(m.chat, videoURL, 'tiktok.mp4', `Ini kak videonya\n\n${infonya_gan}`, m);
             setTimeout(async () => {
-                //await conn.sendFile(m.chat, videoURLWatermark, 'tiktokwm.mp4', `*Ini Versi Watermark*\n\n${infonya_gan}`, m);
+                //await conn.sendFile(m.chat, videoURLWatermark, 'tiktokwm.mp4', `${infonya_gan}`, m);
                 //await conn.sendFile(m.chat, `${tiktokData.music.play_url}`,'lagutt.mp3', 'ini lagunya',m);
             }, 5000);
         } else {
