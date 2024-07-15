@@ -7,7 +7,7 @@ var handler = async (m, { conn, args }) => {
     }
 
     try {
-        await conn.reply(m.chat, 'Espera un momento hermana, el video se está descargando... servidor 1', m, fwc);
+        await conn.reply(m.chat, '`𝗖𝗔𝗥𝗚𝗔𝗡𝗗𝗢` 🐈‍⬛', m, fwc);
 
         const tiktokData = await tryServer1(args[0]);
 
