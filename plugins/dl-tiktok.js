@@ -30,7 +30,7 @@ var handler = async (m, { conn, args }) => {
         if (videoURL || videoURLWatermark) {
             await conn.sendFile(m.chat, videoURL, 'tiktok.mp4', `${infonya_gan}`, m);
             setTimeout(async () => {
-                //await conn.sendFile(m.chat, videoURLWatermark, 'tiktokwm.mp4', `${infonya_gan}`, m, fwc);
+                //await conn.sendFile(m.chat, videoURLWatermark, 'tiktokwm.mp4', `${infonya_gan}`, m);
                 //await conn.sendFile(m.chat, `${tiktokData.music.play_url}`,'lagutt.mp3', 'ini lagunya',m);
             }, 5000);
         } else {
