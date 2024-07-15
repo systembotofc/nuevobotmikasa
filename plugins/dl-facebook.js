@@ -6,7 +6,7 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
   const urlRegex = /^(?:https?:\/\/)?(?:www\.)?(?:facebook\.com|fb\.watch)\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i;
   if (!urlRegex.test(args[0])) conn.reply(m.chat,'𝙿𝚘𝚛𝚏𝚊𝚟𝚘𝚛 𝚛𝚎𝚟𝚒𝚜𝚊 𝚀𝚞𝚎 𝙴𝚕 𝙻𝚒𝚗𝚔 𝚂𝚎𝚊 𝙳𝚎 𝙵𝚊𝚌𝚎𝚋𝚘𝚘𝚔 :𝟹', m)
 
-  m.react(rwait);
+  m.react(🕒);
 
   try {
     const result = await fg.fbdl(args[0]);
