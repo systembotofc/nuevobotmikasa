@@ -4,7 +4,7 @@ const pp = 'https://tinyurl.com/2648ennm'
 const groupAdmins = participants.filter(p => p.admin)
 const listaAdmins = groupAdmins.map((v, i) => ``).join('\n')
 const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
-let [_, horario, splitter, modalidad] = text.match(Reg)
+let [_, horario, splitter, modalidad] = text.match(4vs4masc)
 if (!text) return m.reply(`Ingresa un horario`)
 if (text.length < 0) return m.reply(`⚙️ 𝗛𝗢𝗥𝗔𝗥𝗜𝗢 𝗠𝗔𝗟 𝗘𝗦𝗖𝗥𝗜𝗧𝗢, 𝗜𝗡𝗧𝗘𝗡𝗧𝗔 𝗗𝗘 𝗡𝗨𝗘𝗩𝗢.`)
 let mensaje = args.join` `
