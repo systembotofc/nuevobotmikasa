@@ -32,7 +32,7 @@ let handler = async (m, {usedPrefix}) => {
     }
   );
 };
-handler.help = ["bal"];
-handler.tags = ["xp"];
+handler.help = ["banco"];
+handler.tags = ["econ"];
 handler.command = ["bal", "diamantes", "diamond", "balance", "banco"];
 export default handler;
