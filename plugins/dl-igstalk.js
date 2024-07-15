@@ -1,4 +1,4 @@
-//*const axios = require('axios')
+const axios = require('axios')
 const cheerio = require('cheerio')
 
 let handler = async (m, { conn, args }) => {
@@ -62,4 +62,4 @@ async function igstalk(username) {
     console.error(e)
     throw 'Username tidak ditemukan'
   }
-}*\\
+}
