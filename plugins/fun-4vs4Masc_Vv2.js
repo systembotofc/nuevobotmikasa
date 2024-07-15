@@ -4,7 +4,7 @@ const pp = 'https://tinyurl.com/2648ennm'
 const groupAdmins = participants.filter(p => p.admin)
 const listaAdmins = groupAdmins.map((v, i) => ``).join('\n')
 const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
-if (!text) return m.reply('➤ `𝗔𝗩𝗜𝗦𝗢` 🐈‍⬛\n\n*INGRESA UN HORARIO*\n_Ejemplo: .4vs4infimasc 10:00 🇦🇷_')
+if (!text) return m.reply('➤ `𝗔𝗩𝗜𝗦𝗢` 🐈‍⬛\n\n*INGRESA UN HORARIO*\n_Ejemplo: .4vs44vs4compemasc 10:00 🇦🇷_')
 if (text.length < 0) return m.reply(`⚙️ 𝗛𝗢𝗥𝗔𝗥𝗜𝗢 𝗠𝗔𝗟 𝗘𝗦𝗖𝗥𝗜𝗧𝗢, 𝗜𝗡𝗧𝗘𝗡𝗧𝗔 𝗗𝗘 𝗡𝗨𝗘𝗩𝗢.`)
         m.react('🎮') 
 let mensaje = args.join` `
