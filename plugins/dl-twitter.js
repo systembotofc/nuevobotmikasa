@@ -27,7 +27,9 @@ try {
     throw '*[❗] Error, intente mas tarde.*';
     return;
   }
-};    
+};  
+handler.help = ["x <link>"]
+handler.tags = ["dl"]     
 handler.command = /^((x|xdl|dlx|twdl|tw|twt|twitter)(dl)?)$/i;
 handler.diamond = true
 export default handler;
