@@ -80,6 +80,12 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
                 id: `${usedPrefix}allmenu`,
             },
             {
+                header: ". .┊☁️ MENU FREE FIRE",
+                title: "",
+                description: `𝘔𝘶𝘦𝘴𝘵𝘳𝘢 𝘦𝘭 𝘮𝘦𝘯𝘶 𝘥𝘦 𝘧𝘳𝘦𝘦 𝘧𝘪𝘳𝘦`,
+                id: `${usedPrefix}menuff`,
+            },
+            {
                 header: ". .┊☁️ MENU AUDIOS",
                 title: "",
                 description: `𝘔𝘶𝘦𝘴𝘵𝘳𝘢 𝘦𝘭 𝘮𝘦𝘯𝘶 𝘥𝘦 𝘢𝘶𝘥𝘪𝘰𝘴`,
