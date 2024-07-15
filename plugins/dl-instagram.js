@@ -17,7 +17,7 @@ const fkontak = {
         }, 
         "participant": "0@s.whatsapp.net"
     }
-if (!args[0]) throw `${lenguajeMY['smsAvisoMG']()}𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙐𝙉 𝙀𝙉𝙇𝘼𝘾𝙀 𝘿𝙀 𝙄𝙉𝙎𝙏𝘼𝙂𝙍𝘼𝙈 𝙋𝘼𝙍𝘼 𝘿𝙀𝙎𝘾𝘼𝙍𝙂𝘼𝙍 𝙎𝙐 𝙑𝙄𝘿𝙀𝙊 𝙊 𝙄𝙈𝘼𝙂𝙀𝙉\n𝙀𝙅𝙀𝙈𝙋𝙇𝙊\n*${usedPrefix + command} https://www.instagram.com/tv/Cd8U99IloVA/?igshid=YmMyMTA2M2Y=*\n\n𝙀𝙉𝙏𝙀𝙍 𝘼 𝙄𝙉𝙎𝙏𝘼𝙂𝙍𝘼𝙈 𝙇𝙄𝙉𝙆 𝙏𝙊 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿 𝙔𝙊𝙐𝙍 𝙑𝙄𝘿𝙀𝙊 𝙊𝙍 𝙄𝙈𝘼𝙂𝙀\n𝙀𝙓𝘼𝙈𝙋𝙇𝙀\n*${usedPrefix + command} https://www.instagram.com/p/CCoI4DQBGVQ/?igshid=YmMyMTA2M2Y=*`
+if (!args[0]) throw `𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙐𝙉 𝙀𝙉𝙇𝘼𝘾𝙀 𝘿𝙀 𝙄𝙉𝙎𝙏𝘼𝙂𝙍𝘼𝙈 𝙋𝘼𝙍𝘼 𝘿𝙀𝙎𝘾𝘼𝙍𝙂𝘼𝙍 𝙎𝙐 𝙑𝙄𝘿𝙀𝙊 𝙊 𝙄𝙈𝘼𝙂𝙀𝙉\n𝙀𝙅𝙀𝙈𝙋𝙇𝙊\n*${usedPrefix + command} https://www.instagram.com/tv/Cd8U99IloVA/?igshid=YmMyMTA2M2Y=*\n\n𝙀𝙉𝙏𝙀𝙍 𝘼 𝙄𝙉𝙎𝙏𝘼𝙂𝙍𝘼𝙈 𝙇𝙄𝙉𝙆 𝙏𝙊 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿 𝙔𝙊𝙐𝙍 𝙑𝙄𝘿𝙀𝙊 𝙊𝙍 𝙄𝙈𝘼𝙂𝙀\n𝙀𝙓𝘼𝙈𝙋𝙇𝙀\n*${usedPrefix + command} https://www.instagram.com/p/CCoI4DQBGVQ/?igshid=YmMyMTA2M2Y=*`
   const { key } = await conn.sendMessage(m.chat, {text: wait}, {quoted: fkontak});
 // await delay(1000 * 2);
 await conn.sendMessage(m.chat, {text: waitt, edit: key});
@@ -37,7 +37,7 @@ try {
 const datTa = await instagram.v1(args[0]);
 for (const urRRl of datTa) {
 const shortUrRRl = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
-const tXXxt = `✨ *ENLACE | URL:* ${shortUrRRl}\n\n${wm}`.trim();
+const tXXxt = `✨ *ENLACE | URL:* ${shortUrRRl}\n\n${packname}`.trim();
 conn.sendFile(m.chat, urRRl.url, 'error.mp4', tXXxt, m);
 await new Promise((resolve) => setTimeout(resolve, 10000));
 }} catch {
@@ -62,7 +62,7 @@ const txt1 = `✨ *ENLACE | URL:* ${shortUrl1}\n\n${wm}`.trim();
 await conn.sendFile(m.chat, videoig, 'error.mp4', txt1, m);
 } catch {
 console.log('Error en el intento 4, sin resultados')  
-conn.sendMessage(m.chat, {text: `${lenguajeMY['smsAvisoFG']()} 𝗢𝗖𝗨𝗥𝗥𝗜𝗢 𝗨𝗡 𝙀𝙍𝙍𝙊𝙍 𝗜𝗡𝗘𝗦𝗣𝗘𝗥𝗔𝗗𝗢 𝙋𝙊𝙍𝙁𝘼𝙑𝙊𝙍 𝙑𝙐𝙀𝙇𝙑𝘼 𝘼 𝙄𝙉𝙏𝙀𝙉𝙏𝘼𝗥`, edit: key});
+conn.sendMessage(m.chat, {text: `𝗢𝗖𝗨𝗥𝗥𝗜𝗢 𝗨𝗡 𝙀𝙍𝙍𝙊𝙍 𝗜𝗡𝗘𝗦𝗣𝗘𝗥𝗔𝗗𝗢 𝙋𝙊𝙍𝙁𝘼𝙑𝙊𝙍 𝙑𝙐𝙀𝙇𝙑𝘼 𝘼 𝙄𝙉𝙏𝙀𝙉𝙏𝘼𝗥`, edit: key});
 handler.limit = 0
 }}}}}}
 handler.help = ['instagram <link ig>']
