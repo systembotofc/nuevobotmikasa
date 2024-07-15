@@ -37,9 +37,9 @@ m.react(`🔥`)
     throw '*⚠️ ¿Que esta buscando pajin? ingresa un enlace valido de xnxx*\n\n*Aqui te recomiendo uno algo similar a estos:* https://www.xnxx.com/video-14lcwbe8/rubia_novia_follada_en_cuarto_de_bano';
   }
 };
-handler.help = ['xnxxdl']
-handler.tags = ['nsfw'];
-handler.command = /^(xnxxdl2)$/i;
+handler.help = ['xnxxdl <link>']
+handler.tags = ['dl'];
+handler.command = /^(xnxxdl)$/i;
 handler.limit = 12
 handler.register = true
 export default handler;
