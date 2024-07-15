@@ -29,9 +29,10 @@ ${yo}
 conn.sendFile(m.chat, pp, 'error.jpg', texto, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
 
 }
-handler.help = ['admins']
+handler.help = ['4vs4masc <hora>']
 handler.tags = ['ff']
 handler.command = /^(4x4masc|4vs4masc)$/i
+handler.admin = true
 handler.group = true
 
 export default handler
