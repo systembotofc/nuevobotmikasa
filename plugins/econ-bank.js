@@ -20,7 +20,7 @@ let handler = async (m, {usedPrefix}) => {
         mentionedJid: [m.sender],
         externalAdReply: {
           title: `GENESIS - BANK`,
-          sourceUrl: "https://whatsapp.com/channel/0029VaYTBn3DZ4LaHbgzxw0B",
+          sourceUrl: "https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y",
           mediaType: 1,
           showAdAttribution: true,
           thumbnailUrl: "https://telegra.ph/file/e01c177fb1c61f453c659.jpg",
