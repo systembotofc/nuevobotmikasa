@@ -21,7 +21,7 @@ let handler = async (m, {conn, text, usedPrefix, command, groupMetadata}) => {
     let coin = Math.floor(Math.random() * 15) + 10;
     let diamond = Math.floor(Math.random() * 5) + 3;
     let raid = `*Has saqueado ⚔️ a @${_user.split("@s.whatsapp.net")[0]}*
-◦ Coins🪙: $${coin}
+◦ GeneCoins🐈‍⬛: $${coin}
 ◦ Diamantes💎: ${diamond}
 
 Robado por: @${m.sender.split("@")[0]}`;
