@@ -16,7 +16,7 @@ let teks = `乂  *STALKER TIKTOK*
 ⛱️ *Descripción:* ${res.result.description}`
 await conn.sendMessage(m.chat, {image: {url : res.result.pp_user}, caption: teks}, {quoted: m})
 } catch (err) {
-m.reply('Error Username tidak ditemukan\nSilahkan kirim Username yang valid!')
+m.reply('Error Nombre de usuario no encontrado\n¡Envíe un nombre de usuario válido!')
 }
 
 }
