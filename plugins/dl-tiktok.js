@@ -23,7 +23,6 @@ var handler = async (m, { conn, args }) => {
         if (tiktokData.author && tiktokData.author.avatar) {
             ppTiktok = tiktokData.author.avatar;
         }
-        m.react('✅') 
 
         const infonya_gan = `𝗔𝗤𝗨𝗜 𝗧𝗜𝗘𝗡𝗘𝗦 𝗧𝗨 𝗩𝗜𝗗𝗘𝗢 🐈‍⬛\n\n𝗙𝗲𝗰𝗵𝗮: ${tiktokData.created_at}\n𝗨𝘀𝘂𝗮𝗿𝗶𝗼: ${tiktokData.author.name || 'Tidak ada informasi penulis'}\n`;
 
@@ -31,6 +30,7 @@ var handler = async (m, { conn, args }) => {
             await conn.sendFile(m.chat, videoURL, 'tiktok.mp4', `${infonya_gan}`, m);
             setTimeout(async () => {
                 //await conn.sendFile(m.chat, videoURLWatermark, 'tiktokwm.mp4', `${infonya_gan}`, m);
+        m.react('✅') 
                 //await conn.sendFile(m.chat, `${tiktokData.music.play_url}`,'lagutt.mp3', 'ini lagunya',m);
             }, 5000);
         } else {
