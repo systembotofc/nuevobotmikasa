@@ -1,88 +1,57 @@
+import { instagramdl } from '@bochilteam/scraper';
 import fetch from 'node-fetch';
-import axios from 'axios';
-import instagramGetUrl from 'instagram-url-direct';
-import {instagram} from '@xct007/frieren-scraper';
-import {instagramdl} from '@bochilteam/scraper';
-import instagramDl from '@sasmeee/igdl';
-import {fileTypeFromBuffer} from 'file-type';
 
-const handler = async (m, {conn, args, command, usedPrefix}) => {
-  const datas = global
+var handler = async (m, { args, conn, usedPrefix, command }) => {
+    if (!args[0]) throw `Ex:\n${usedPrefix}${command} https://www.instagram.com/reel/C0EEgMNSSHw/?igshid=MzY1NDJmNzMyNQ==`;
+    try {
+        let res = await bochil.snapsave(args[0]);
+        let media = await res[0].url;
 
-  if (!args[0]) return conn.reply(m.chat, `⚠️ Ingresa el enlace del vídeo de Instagram junto al comando.\n\nEjemplo: *${usedPrefix + command}* https://www.instagram.com/p/C60xXk3J-sb/?igsh=YzljYTk1ODg3Zg==`, m)
-  await m.react('⌛')
-  try {
-const img = await instagramDl(args[0]);
-for (let i = 0; i < img.length; i++) {
-    const bufferInfo = await getBuffer(img[i].download_link);
-        if (bufferInfo.detectedType.mime.startsWith('image/')) {
-            await conn.sendMessage(m.chat, {image: {url: img[i].download_link}}, {quoted: m});
-        } else if (bufferInfo.detectedType.mime.startsWith('video/')) {
-await conn.sendFile(m.chat, img[i].download_link, 'igdl.mp4', `*Aqui esta el video de Instagram*`, m, null, fake)
-//conn.sendMessage(m.chat, {video: {url: img[i].download_link }}, {quoted: m});
- await m.react('✅')
-        }
-}
-  } catch {   
-  try {
-    const datTa = await instagram.download(args[0]);
-    for (const urRRl of datTa) {
-      const shortUrRRl = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
-      const tXXxt = `_${shortUrRRl}_`.trim();
-      conn.sendFile(m.chat, urRRl.url, 'error.mp4', tXXxt, m, null, fake);
-      await new Promise((resolve) => setTimeout(resolve, 10000));
-await m.react('✅')    
-    }
-  } catch {
+        const sender = m.sender.split(`@`)[0];
+
+        conn.reply(m.chat, 'Sedang mengunduh video...', m);
+
+        if (!res) throw 'Can\'t download the post';
+
+        await conn.sendMessage(m.chat, { video: { url: media }, caption: `ini kak videonya @${sender}`, mentions: [m.sender]}, m);
+
+      await conn.sendMessage(m.chat, { 
+        document: { url: media }, 
+        mimetype: 'video/mp4', 
+        fileName: `instagram.mp4`,
+        caption: `ini kak videonya @${sender} versi dokumen, agar jernih`, mentions: [m.sender]
+      }, {quoted: m})
+
+    } catch (e) {
       try {
-        const resultss = await instagramGetUrl(args[0]).url_list[0];
-        const shortUrl2 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
-        const txt2 = `_${shortUrl2}_`.trim();
-        await conn.sendFile(m.chat, resultss, 'error.mp4', txt2, m, null, fake);
- await m.react('✅')
-      } catch {
-        try {
-          const resultssss = await instagramdl(args[0]);
-          const shortUrl3 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
-          const txt4 = `_${shortUrl3}_`.trim();
-          for (const {url} of resultssss) await conn.sendFile(m.chat, url, 'error.mp4', txt4, m, null, fake);
-   await m.react('✅')
-        } catch {
-          try {
-            const human = await fetch(`https://api.lolhuman.xyz/api/instagram?apikey=${lolkeysapi}&url=${args[0]}`);
-            const json = await human.json();
-            const videoig = json.result;
-            const shortUrl1 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
-            const txt1 = `_${shortUrl1}_`.trim();
-            await conn.sendFile(m.chat, videoig, 'error.mp4', txt1, m, null, fake);
- await m.react('✅')
-          } catch (e) {
-            await m.react('❌')
-console.log(e) 
+          let response = await fetch(`https://tr.deployers.repl.co/instagramdl?url=${encodeURIComponent(args[0])}`);
+          let data = await response.json();
+
+          if (data.image && data.video) {
+              const sender = m.sender.split(`@`)[0];
+
+              conn.reply(m.chat, 'Sedang mengunduh video...', m);
+
+            await conn.sendMessage(m.chat, { video: data.video, caption: `ini kak videonya @${sender}`, mentions: [m.sender] }, m);
+
+            await conn.sendMessage(m.chat, { 
+              document: { url: data.video }, 
+              mimetype: 'video/mp4', 
+              fileName: `instagram.mp4`,
+              caption: `ini kak videonya @${sender} versi dokumen, agar jernih`, mentions: [m.sender]
+            }, {quoted: m})
+
+          } else {
+              throw 'Gagal mengunduh video';
           }
-        }
+      } catch (error) {
+          conn.reply(m.chat, 'Gagal mengunduh video', m);
       }
     }
-  }
 };
-handler.help = ['instagram *<link ig>*']
-handler.tags = ['downloader']
-handler.command = /^(instagramdl|instagram|igdl|ig|instagramdl2|instagram2|igdl2|ig2|instagramdl3|instagram3|igdl3|ig3)$/i
-handler.limit = 1
-handler.register = true 
+
+handler.help = ['instagram'];
+handler.tags = ['downloader'];
+handler.command = /^(ig(dl)?|instagram(dl)?)$/i;
+
 export default handler;
-
-const getBuffer = async (url, options) => {
-    options = options || {};
-    const res = await axios({method: 'get', url, headers: {'DNT': 1, 'Upgrade-Insecure-Request': 1}, ...options, responseType: 'arraybuffer'});
-    const buffer = Buffer.from(res.data, 'binary');
-    const detectedType = await fileTypeFromBuffer(buffer);
-    if (!detectedType || (detectedType.mime !== 'image/jpeg' && detectedType.mime !== 'image/png' && detectedType.mime !== 'video/mp4')) {
-        return null;
-    }
-    return { buffer, detectedType };
-};
-
-
-
-
