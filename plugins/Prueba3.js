@@ -27,7 +27,7 @@ ${yo}
 │⚜️ ➤ 
 │⚜️ ➤ 
 ╰─────────────╯`.trim()
-conn.sendFile(m.chat, pp, 'error.jpg', texto, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
+conn.sendFile(m.chat, pp, 'error.jpg', texto, m, false, { mentions: [...groupAdmins.map(v => v.id), owner], m, fwc })
 
 }
 handler.help = ['4vs4masc <hora>']
