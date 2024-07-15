@@ -5,7 +5,7 @@
 import fetch from 'node-fetch'
 let handler = async (m, { conn, command }) => {
 
-if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `${lenguajeGB['smsContAdult']()}`
+if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `*LOS COMANDOS 🔞 ESTÁN DESACTIVADOS, SI USTED ES MI CREADOR(A) USE #on modohorny*`
 let url = muslos[Math.floor(Math.random() * muslos.length)]
 conn.sendButton(m.chat, `🌌 _${command}_ 🌌`.trim(), packname, url, [['🐈‍⬛ SIGUIENTE 🐈‍⬛', `/${command}`]], null, null, m)
 }
