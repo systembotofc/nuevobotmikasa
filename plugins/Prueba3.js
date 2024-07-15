@@ -10,7 +10,7 @@ let mensaje = args.join` `
 let yo = `│🕓 𝗛𝗢𝗥𝗔: *${text}*`
 let texto = `
 ╭──────>⋆☽⋆ 🐈‍⬛ ⋆☾⋆<──────╮
-ㅤ     •𝟰 𝗩𝗘𝗥𝗦𝗨𝗦 𝟰•
+ㅤ       •𝟰  𝗩 𝗘 𝗥 𝗦 𝗨 𝗦  𝟰•
          ${groupMetadata.subject}
 ╰──────>⋆☽⋆ 🐈‍⬛ ⋆☾⋆<──────╯
 
