@@ -1,57 +1,74 @@
-import { instagramdl } from '@bochilteam/scraper';
-import fetch from 'node-fetch';
+/*
+wa.me/6282285357346
+github: https://github.com/sadxzyq
+Instagram: https://instagram.com/tulisan.ku.id
+ini wm gw cok jan di hapus
+*/
 
-var handler = async (m, { args, conn, usedPrefix, command }) => {
-    if (!args[0]) throw `Ex:\n${usedPrefix}${command} https://www.instagram.com/reel/C0EEgMNSSHw/?igshid=MzY1NDJmNzMyNQ==`;
-    try {
-        let res = await bochil.snapsave(args[0]);
-        let media = await res[0].url;
-      
-        const sender = m.sender.split(`@`)[0];
+import axios from 'axios'
 
-        conn.reply(m.chat, 'Sedang mengunduh video...', m);
+let handler = async (m, { conn, args, usedPrefix, command, text }) => {
+let input = `[!] *wrong input*
+	
+Ex : ${usedPrefix + command} https://www.instagram.com/reel/CsC2PQCNgM1/?igshid=NTc4MTIwNjQ2YQ==`
+if (!text) return m.reply(input)
+let no = 1
+try {
+const { status, media } = await igdl(text);
+if (status !== 200) throw eror
+await conn.sendMessage(m.chat, {react: {text: '🕐', key: m.key}})
+await media.map(v => conn.sendFile(m.sender, v , '', `乂 *I N S T A G R A M*\n\n*Result : ${usedPrefix + command}\n*Url*: ${text}`, m))
+await conn.sendMessage(m.chat, {react: {text: '✅', key: m.key}})
 
-        if (!res) throw 'Can\'t download the post';
-      
-        await conn.sendMessage(m.chat, { video: { url: media }, caption: `ini kak videonya @${sender}`, mentions: [m.sender]}, m);
-      
-      await conn.sendMessage(m.chat, { 
-        document: { url: media }, 
-        mimetype: 'video/mp4', 
-        fileName: `instagram.mp4`,
-        caption: `ini kak videonya @${sender} versi dokumen, agar jernih`, mentions: [m.sender]
-      }, {quoted: m})
+ } catch (e) {
+ throw eror
+ await conn.sendMessage(m.chat, {react: {text: '❎', key: m.key}})
+ 
+ }
+}
+handler.help = ["ig"]
+handler.tags = ['downloader']
+handler.command = /^(ig2|instagram2|igdl2)$/i
+handler.limit = true
+handler.register = true
 
-    } catch (e) {
-      try {
-          let response = await fetch(`https://tr.deployers.repl.co/instagramdl?url=${encodeURIComponent(args[0])}`);
-          let data = await response.json();
+export default handler
 
-          if (data.image && data.video) {
-              const sender = m.sender.split(`@`)[0];
-
-              conn.reply(m.chat, 'Sedang mengunduh video...', m);
-
-            await conn.sendMessage(m.chat, { video: data.video, caption: `ini kak videonya @${sender}`, mentions: [m.sender] }, m);
-
-            await conn.sendMessage(m.chat, { 
-              document: { url: data.video }, 
-              mimetype: 'video/mp4', 
-              fileName: `instagram.mp4`,
-              caption: `ini kak videonya @${sender} versi dokumen, agar jernih`, mentions: [m.sender]
-            }, {quoted: m})
-            
-          } else {
-              throw 'Gagal mengunduh video';
-          }
-      } catch (error) {
-          conn.reply(m.chat, 'Gagal mengunduh video', m);
+async function igdl(url) {
+  return new Promise(async (resolve, reject) => {
+    const payload = new URLSearchParams(
+      Object.entries({
+        url: url,
+        host: "instagram"
+      })
+    )
+    await axios.request({
+      method: "POST",
+      baseURL: "https://saveinsta.io/core/ajax.php",
+      data: payload,
+      headers: {
+        "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+        cookie: "PHPSESSID=rmer1p00mtkqv64ai0pa429d4o",
+        "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36"
       }
-    }
-};
-
-handler.help = ['instagram'];
-handler.tags = ['downloader'];
-handler.command = /^(ig(dl)?|instagram(dl)?)$/i;
-
-export default handler;
+    })
+    .then(( response ) => {      
+      const $ = cheerio.load(response.data)
+      const mediaURL = $("div.row > div.col-md-12 > div.row.story-container.mt-4.pb-4.border-bottom").map((_, el) => {
+        return "https://saveinsta.io/" + $(el).find("div.col-md-8.mx-auto > a").attr("href")
+      }).get()
+      const res = {
+        status: 200,
+        media: mediaURL
+      }
+      resolve(res)
+    })
+    .catch((e) => {
+      console.log(e)
+      throw {
+        status: 400,
+        message: "error",
+      }
+    })
+  })
+}
