@@ -31,18 +31,16 @@ const messages = [[ // CARRUSEL 1
 'Descripción de Carrusel 3',
 '@usxr_angelito0',
 'https://telegra.ph/file/ec725de5925f6fb4d5647.jpg',
-[['Botón1', 'Id1'], ['Botón2', 'Id2']],
-[['Texto para copiar 1'], ['Texto para copiar 2']],
-[['Enlace1', 'https://example.com/link1'], ['Enlace2', 'https://example.com/link2']],
-[['Botón Lista 1', sections], ['Botón Lista 2', sections]]
+[['Botón1', usedPrefix + 'menu'] /* etc... */],
+[['Texto para copiar 1'] /* etc... */],
+[['Canal 🐈‍⬛', fgcanal] /* etc... */]
 ], [ // CARRUSEL 4
 'Descripción de Carrusel 4',
 '@usxr_angelito0',
 'https://telegra.ph/file/7acad0975febb71446da5.jpg',
-[['Botón1', 'Id1'], ['Botón2', 'Id2']],
-[['Texto para copiar 1'], ['Texto para copiar 2']],
-[['Enlace1', 'https://example.com/link1'], ['Enlace2', 'https://example.com/link2']],
-[['Botón Lista 1', sections], ['Botón Lista 2', sections]]
+[['Botón1', usedPrefix + 'menu'] /* etc... */],
+[['Texto para copiar 1'] /* etc... */],
+[['Canal 🐈‍⬛', fgcanal] /* etc... */]]
 ]] /* etc... */
 await conn.sendCarousel(m.chat, '`G` `R` `U` `P` `O` `S`\n\n`G` `E` `N` `E` `S` `I` `S`', '@usxr_angelito0', 'GENESIS BOT OFC 🐈‍⬛', messages, m)            
 
