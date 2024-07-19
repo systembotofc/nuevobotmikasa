@@ -45,7 +45,7 @@ const messages = [[ // CARRUSEL 1
 [['Enlace1', 'https://example.com/link1'], ['Enlace2', 'https://example.com/link2']],
 [['Botón Lista 1', sections], ['Botón Lista 2', sections]]
 ]] /* etc... */
-await conn.sendCarousel(m.chat, '`G` `R` `U` `P` `O` `S`\n\n`G` `E` `N` `E` `S` `I` `S`', '@usxr_angelito0', 'Titulo de Carrusel', messages, m)            
+await conn.sendCarousel(m.chat, '`G` `R` `U` `P` `O` `S`\n\n`G` `E` `N` `E` `S` `I` `S`', '@usxr_angelito0', 'GENESIS BOT OFC 🐈‍⬛', messages, m)            
 
 }
 handler.command = /^(carousel)$/i
