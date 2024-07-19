@@ -13,8 +13,8 @@ rows: [
 { header: 'Encabezado4', title: "Título4", description: 'Descripción4', id: "Id4" }, 
 ]},]  
 const messages = [[ // CARRUSEL 1
-'Descripción de Carrusel 1', 
-'Footer de Carrusel 1',
+'Canal oficial de GenesisBot 🐈‍⬛', 
+'@usxr_angelito',
 'https://telegra.ph/file/b5aa194800f54bbb1314b.jpg',
 [['Botón1', usedPrefix + 'menu'], ['Botón2', 'Id2'] /* etc... */],
 [['Texto para copiar 1'], ['Texto para copiar 2'] /* etc... */],
