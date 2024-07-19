@@ -13,9 +13,11 @@ rows: [
 { header: 'Encabezado4', title: "Título4", description: 'Descripción4', id: "Id4" }, 
 ]},]  
 const messages = [[ // CARRUSEL 1
-'Canal oficial de GenesisBot 🐈‍⬛', 
-'@usxr_angelito',
-'https://telegra.ph/file/b5aa194800f54bbb1314b.jpg',
+'Descripción de Carrusel 1', 
+'Footer de Carrusel 1',
+'https://telegra.ph/file/24b24c495b5384b218b2f.jpg',
+[['Botón1', usedPrefix + 'menu'], ['Botón2', 'Id2'] /* etc... */],
+[['Texto para copiar 1'], ['Texto para copiar 2'] /* etc... */],
 [['Enlace1', fgcanal], ['Enlace2', 'https://example.com/link2'] /* etc... */],
 [['Botón Lista 1', sections], ['Botón Lista 2', sections] /* etc... */]
 ], [ // CARRUSEL 2
