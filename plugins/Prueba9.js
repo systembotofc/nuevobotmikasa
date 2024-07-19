@@ -14,7 +14,7 @@ rows: [
 { header: 'Encabezado4', title: "Título4", description: 'Descripción4', id: "Id4" }, 
 ]},]  
 const messages = [[ // CARRUSEL 1
-'Descripción de Carrusel 1', 
+'CANAL OFICIAL 🐈‍⬛', 
 '@usxr_angelito0',
 'https://telegra.ph/file/24b24c495b5384b218b2f.jpg',
 [['Botón1', usedPrefix + 'menu'], ['Botón2', 'Id2'] /* etc... */],
