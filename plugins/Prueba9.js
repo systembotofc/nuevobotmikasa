@@ -6,7 +6,7 @@ if (!db.data.chats[m.chat].modohorny && m.isGroup) return conn.sendFile(m.chat, 
   switch (command) {
     case 'pack':
       const url = await pack[Math.floor(Math.random() * pack.length)];
-      conn.sendButton(m.chat, '_🥵 aqui tiene mi Pack 😏_', botname, url, [['🥵 𝐒𝐈𝐆𝐔𝐈𝐄𝐍𝐓𝐄 🥵', `/${command}`]], null, null, m)
+      conn.sendButton(m.chat, '_🥵 aqui tiene mi Pack 😏_', packname, url, [['🥵 𝐒𝐈𝐆𝐔𝐈𝐄𝐍𝐓𝐄 🥵', `/${command}`]], null, null, m)
   //conn.sendMessage(m.chat, {image: {url: url}, caption: `_🥵 aqui tiene mi Pack 😏_`}, {quoted: m});
       break;
     case 'pack2':
