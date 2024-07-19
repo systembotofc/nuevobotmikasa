@@ -20,7 +20,7 @@ const messages = [[ // CARRUSEL 1
 [['Botón1', usedPrefix + 'menu'] /* etc... */],
 [['Texto para copiar 1'] /* etc... */],
 [['Canal 🐈‍⬛', fgcanal] /* etc... */],
-[['Botón Lista 1', sections], ['Botón Lista 2', sections] /* etc... */]
+[['Botón Lista 1', sections] /* etc... */]
 ], [ // CARRUSEL 2
 'Descripción de Carrusel 2',
 '@usxr_angelito0',
