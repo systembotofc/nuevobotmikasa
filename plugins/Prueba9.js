@@ -14,7 +14,7 @@ rows: [
 ]},]  
 const messages = [[ // CARRUSEL 1
 'Descripción de Carrusel 1', 
-'Footer de Carrusel 1',
+'@usxr_angelito0',
 'https://telegra.ph/file/24b24c495b5384b218b2f.jpg',
 [['Botón1', usedPrefix + 'menu'], ['Botón2', 'Id2'] /* etc... */],
 [['Texto para copiar 1'], ['Texto para copiar 2'] /* etc... */],
@@ -22,7 +22,7 @@ const messages = [[ // CARRUSEL 1
 [['Botón Lista 1', sections], ['Botón Lista 2', sections] /* etc... */]
 ], [ // CARRUSEL 2
 'Descripción de Carrusel 2',
-'Footer de Carrusel 2',
+'@usxr_angelito0',
 'https://telegra.ph/file/e9239fa926d3a2ef48df2.jpg',
 [['Botón1', 'Id1'], ['Botón2', 'Id2']],
 [['Texto para copiar 1'], ['Texto para copiar 2']],
@@ -30,7 +30,7 @@ const messages = [[ // CARRUSEL 1
 [['Botón Lista 1', sections], ['Botón Lista 2', sections]]
 ], [ // CARRUSEL 3
 'Descripción de Carrusel 3',
-'Footer de Carrusel 3',
+'@usxr_angelito0',
 'https://telegra.ph/file/ec725de5925f6fb4d5647.jpg',
 [['Botón1', 'Id1'], ['Botón2', 'Id2']],
 [['Texto para copiar 1'], ['Texto para copiar 2']],
@@ -38,7 +38,7 @@ const messages = [[ // CARRUSEL 1
 [['Botón Lista 1', sections], ['Botón Lista 2', sections]]
 ], [ // CARRUSEL 4
 'Descripción de Carrusel 4',
-'Footer de Carrusel 4',
+'@usxr_angelito0',
 'https://telegra.ph/file/7acad0975febb71446da5.jpg',
 [['Botón1', 'Id1'], ['Botón2', 'Id2']],
 [['Texto para copiar 1'], ['Texto para copiar 2']],
