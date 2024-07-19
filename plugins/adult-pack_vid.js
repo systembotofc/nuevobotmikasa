@@ -4,11 +4,7 @@ const handler = async (m, {conn, command, usedPrefix}) => {
   switch (command) {
     case 'pack':
       const url = await pack[Math.floor(Math.random() * pack.length)];
-      conn.sendButton(m.chat, '_🥵 aqui tiene mi Pack 😏_', botname, url, [['🥵 𝐒𝐈𝐆𝐔𝐈𝐄𝐍𝐓𝐄 🥵', `/${command}`]], null, null, m)
-
-    case 'pack':
-      const url = await pack[Math.floor(Math.random() * pack.length)];
-      conn.sendMessage(m.chat, {image: {url: url}, caption: `_🥵 Pack 🥵_`}, {quoted: m});
+      conn.sendButton(m.chat, '_🥵 aqui tiene mi Pack 😏_', packname, url, [['🥵 𝐒𝐈𝐆𝐔𝐈𝐄𝐍𝐓𝐄 🥵', `.pack`]], null, null, m)
       break;
     case 'pack2':
       const url2 = await packgirl[Math.floor(Math.random() * packgirl.length)];
