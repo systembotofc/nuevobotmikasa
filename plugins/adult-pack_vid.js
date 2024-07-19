@@ -12,7 +12,7 @@ const handler = async (m, {conn, command, usedPrefix}) => {
       break;
     case 'pack3':
       const url3 = await packmen[Math.floor(Math.random() * packmen.length)];
-      conn.sendMessage(m.chat, {image: {url: url3}, caption: `_🥵 Pack 3 🥵_`}, {quoted: m});
+      conn.sendButton(m.chat, '_🥵 PACK 3 😏_', packname, url3, [['🥵 𝐒𝐈𝐆𝐔𝐈𝐄𝐍𝐓𝐄 🥵', `.pack3`]], null, null, m)
       break;
     case 'videoxxx': case 'vídeoxxx':
       const url4 = await videosxxxc[Math.floor(Math.random() * videosxxxc.length)];
