@@ -17,6 +17,7 @@ const messages = [[ // CARRUSEL 1
 'CANAL OFICIAL 🐈‍⬛', 
 '@usxr_angelito0',
 'https://telegra.ph/file/b5aa194800f54bbb1314b.jpg',
+[['Botón1', usedPrefix + 'menu'] /* etc... */],
 [['Texto para copiar 1'] /* etc... */],
 [['Canal 🐈‍⬛', fgcanal] /* etc... */]
 ], [ // CARRUSEL 2
