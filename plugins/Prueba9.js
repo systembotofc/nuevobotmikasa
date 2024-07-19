@@ -15,7 +15,7 @@ rows: [
 const messages = [[ // CARRUSEL 1
 'Descripción de Carrusel 1', 
 'Footer de Carrusel 1',
-'https://telegra.ph/file/24b24c495b5384b218b2f.jpg',
+'https://telegra.ph/file/b5aa194800f54bbb1314b.jpg',
 [['Botón1', usedPrefix + 'menu'], ['Botón2', 'Id2'] /* etc... */],
 [['Texto para copiar 1'], ['Texto para copiar 2'] /* etc... */],
 [['Enlace1', fgcanal], ['Enlace2', 'https://example.com/link2'] /* etc... */],
