@@ -32,7 +32,7 @@ break
 };
 handler.help = ['pack', 'pack2', 'pack3', 'pack4', 'videoxxx', 'videoxxxlesbi', 'girls', 'pornolesbiv'];
 handler.tags = ['nsfw'];
-handler.command = /^(pack|pack2|pack3|videoxxx|vídeoxxx|videoxxxlesbi|videolesbixxx|pornolesbivid|pornolesbianavid|pornolesbiv|pornolesbianav|pornolesv|girls|pack4)$/i;
+handler.command = /^(pack|pack2|pack3|videoxxx|vídeoxxxx|videoxxxlesbi|videolesbixxx|pornolesbivid|pornolesbianavid|pornolesbiv|pornolesbianav|pornolesv|girls|pack4)$/i;
 handler.limit = 2
 handler.register = true
 export default handler;
