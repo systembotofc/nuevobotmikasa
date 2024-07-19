@@ -24,10 +24,9 @@ const messages = [[ // CARRUSEL 1
 'Descripción de Carrusel 2',
 '@usxr_angelito0',
 'https://telegra.ph/file/b5aa194800f54bbb1314b.jpg',
-[['Botón1', 'Id1'], ['Botón2', 'Id2']],
-[['Texto para copiar 1'], ['Texto para copiar 2']],
-[['Enlace1', 'https://example.com/link1'], ['Enlace2', 'https://example.com/link2']],
-[['Botón Lista 1', sections], ['Botón Lista 2', sections]]
+[['Botón1', usedPrefix + 'menu'] /* etc... */],
+[['Texto para copiar 1'] /* etc... */],
+[['Canal 🐈‍⬛', fgcanal] /* etc... */]
 ], [ // CARRUSEL 3
 'Descripción de Carrusel 3',
 '@usxr_angelito0',
