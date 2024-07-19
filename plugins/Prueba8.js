@@ -1,7 +1,8 @@
 let handler  = async (m, { conn, usedPrefix, command }) => {
 let url = await tiktokhot[Math.floor(Math.random() * tiktokhot.length)]
 await m.react('😈')
-conn.sendButton(m.chat, '» 𝙃𝙊𝙏 𝙏𝙄𝙆 𝙏𝙊𝙆 🔥', packname, url, [['😏 𝐒𝐈𝐆𝐔𝐈𝐄𝐍𝐓𝐄 😏', `.tiktokhot`]], null, null, m)
+conn.sendButton(m.chat, `🌌 _${command}_ 🌌`.trim(), packname, url, [['🐈‍⬛ SIGUIENTE 🐈‍⬛', `/${command}`]], null, null, m)
+}
 handler.help = ['tiktokhot']
 handler.tags = ['random']
 handler.command = /^(tiktokhot)$/i
