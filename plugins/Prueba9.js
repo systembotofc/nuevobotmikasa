@@ -4,6 +4,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 
 // MENSAJE CARUSEL CON TODOS LOS BOTONES DISPONIBLES
 // Si las ids no te funciona con usedPrefix, tendrás que definirlas, ejemplo /menu
+        m.react('🐈‍⬛') 
 const sections = [{
 title: `Título de la sección`,
 rows: [
