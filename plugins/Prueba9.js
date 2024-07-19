@@ -24,7 +24,7 @@ const messages = [[ // CARRUSEL 1
 ], [ // CARRUSEL 2
 'Descripción de Carrusel 2',
 '@usxr_angelito0',
-'https://telegra.ph/file/e9239fa926d3a2ef48df2.jpg',
+'https://telegra.ph/file/b5aa194800f54bbb1314b.jpg',
 [['Botón1', 'Id1'], ['Botón2', 'Id2']],
 [['Texto para copiar 1'], ['Texto para copiar 2']],
 [['Enlace1', 'https://example.com/link1'], ['Enlace2', 'https://example.com/link2']],
